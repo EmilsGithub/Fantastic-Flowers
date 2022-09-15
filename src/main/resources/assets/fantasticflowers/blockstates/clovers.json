@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "fantasticflowers:block/clovers"
+      },
+      {
+        "model": "fantasticflowers:block/clovers","y": 90
+      },
+      {
+        "model": "fantasticflowers:block/clovers","y": 180
+      },
+      {
+        "model": "fantasticflowers:block/clovers","y": 270
+      },
+      {
+        "model": "fantasticflowers:block/clovers_two"
+      },
+      {
+        "model": "fantasticflowers:block/clovers_two","y": 90
+      },
+      {
+        "model": "fantasticflowers:block/clovers_two","y": 180
+      },
+      {
+        "model": "fantasticflowers:block/clovers_two","y": 270
+      }
+    ]
+  }
+}
