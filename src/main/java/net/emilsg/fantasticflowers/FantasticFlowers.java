@@ -2,6 +2,8 @@ package net.emilsg.fantasticflowers;
 
 import net.emilsg.fantasticflowers.block.ModBlocks;
 import net.emilsg.fantasticflowers.item.ModItems;
+import net.emilsg.fantasticflowers.world.feature.ModConfiguredFeatures;
+import net.emilsg.fantasticflowers.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,8 @@ public class FantasticFlowers implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModWorldGen.generateModWorldGen();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

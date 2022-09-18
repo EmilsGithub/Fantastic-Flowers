@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "fantasticflowers:block/magenta_lupine_bottom"
+  }
+}

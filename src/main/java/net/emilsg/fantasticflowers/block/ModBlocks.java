@@ -2,6 +2,7 @@ package net.emilsg.fantasticflowers.block;
 
 import net.emilsg.fantasticflowers.FantasticFlowers;
 import net.emilsg.fantasticflowers.block.custom.CloversBlock;
+import net.emilsg.fantasticflowers.block.custom.ModTallFlowerBlock;
 import net.emilsg.fantasticflowers.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -35,6 +36,10 @@ public class ModBlocks {
     public static final Block CLOVERS = registerBlock("clovers",
             new CloversBlock(PlantBlock.Settings.of(Material.PLANT).breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().
                     noCollision()), ModItemGroup.FANTASTICFLOWERS);
+
+    public static final Block MAGENTA_LUPINE = registerBlock("magenta_lupine",
+            new TallFlowerBlock(FabricBlockSettings.copy(Blocks.ROSE_BUSH).nonOpaque()), ModItemGroup.FANTASTICFLOWERS);
+
 
 
 
