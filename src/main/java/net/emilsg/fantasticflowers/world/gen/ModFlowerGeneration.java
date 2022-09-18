@@ -10,18 +10,19 @@ import static net.minecraft.world.biome.BiomeKeys.*;
 
 public class ModFlowerGeneration {
     public static void generateFlowers(){
+        //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS,FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CLOVERS_PLACED.getKey().get());
-
+        //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS,FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.LIGHT_BLUE_FORGET_ME_NOT_PLACED.getKey().get());
-
+        //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS,FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PINK_FORGET_ME_NOT_PLACED.getKey().get());
-
+        //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS,FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WHITE_FORGET_ME_NOT_PLACED.getKey().get());
-
+        //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MAGENTA_LUPINE.getKey().get());
     }
