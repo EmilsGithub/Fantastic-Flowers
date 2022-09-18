@@ -13,7 +13,7 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "fantastic_flowers:magenta_lupine",
+              "block": "fantasticflowers:magenta_lupine",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"

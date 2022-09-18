@@ -31,7 +31,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MAGENTA_LUPINE_PLACED =
             ConfiguredFeatures.register("magenta_lupine", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
-                    96, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MAGENTA_LUPINE)))) );
 
     public static void registerConfiguredFeatures(){
