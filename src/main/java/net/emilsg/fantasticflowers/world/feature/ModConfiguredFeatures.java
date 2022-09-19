@@ -2,6 +2,8 @@ package net.emilsg.fantasticflowers.world.feature;
 
 import net.emilsg.fantasticflowers.FantasticFlowers;
 import net.emilsg.fantasticflowers.block.ModBlocks;
+import net.emilsg.fantasticflowers.block.custom.ModBlueBerryBushBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -33,6 +35,11 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("magenta_lupine", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                     112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MAGENTA_LUPINE)))) );
+
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> BLUEBERRY_BUSH_PLACED =
+            ConfiguredFeatures.register("blueberry_bush", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
+                    32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLUEBERRY_BUSH)))) );
 
     public static void registerConfiguredFeatures(){
         FantasticFlowers.LOGGER.debug("Registering the ModConfiguredFeatures for" + FantasticFlowers.MOD_ID);

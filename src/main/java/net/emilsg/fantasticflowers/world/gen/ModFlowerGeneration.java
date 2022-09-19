@@ -25,6 +25,9 @@ public class ModFlowerGeneration {
         //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,JUNGLE,FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MAGENTA_LUPINE.getKey().get());
+        //noinspection OptionalGetWithoutIsPresent
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA,SNOWY_TAIGA,OLD_GROWTH_PINE_TAIGA,OLD_GROWTH_SPRUCE_TAIGA),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUEBERRY_BUSH.getKey().get());
     }
 }
 

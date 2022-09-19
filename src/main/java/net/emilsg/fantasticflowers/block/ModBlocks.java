@@ -2,6 +2,7 @@ package net.emilsg.fantasticflowers.block;
 
 import net.emilsg.fantasticflowers.FantasticFlowers;
 import net.emilsg.fantasticflowers.block.custom.CloversBlock;
+import net.emilsg.fantasticflowers.block.custom.ModBlueBerryBushBlock;
 import net.emilsg.fantasticflowers.block.custom.ModTallFlowerBlock;
 import net.emilsg.fantasticflowers.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -38,10 +39,17 @@ public class ModBlocks {
                     noCollision()), ModItemGroup.FANTASTICFLOWERS);
 
     public static final Block MAGENTA_LUPINE = registerBlock("magenta_lupine",
-            new TallFlowerBlock(FabricBlockSettings.copy(Blocks.ROSE_BUSH).nonOpaque()), ModItemGroup.FANTASTICFLOWERS);
+            new ModTallFlowerBlock(FabricBlockSettings.copy(Blocks.ROSE_BUSH).nonOpaque()), ModItemGroup.FANTASTICFLOWERS);
+
+    public static final Block BLUEBERRY_BUSH = registerBlockWithoutItem("blueberry_bush",
+            new ModBlueBerryBushBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()));
 
 
 
+
+private static Block registerBlockWithoutItem(String name, Block block) {
+    return Registry.register(Registry.BLOCK, new Identifier(FantasticFlowers.MOD_ID, name), block);
+}
 
 private static Block registerBlock(String name, Block block, ItemGroup tab) {
     registerBlockItem(name, block, tab);

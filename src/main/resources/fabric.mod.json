@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Fantastic Flowers",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Makes the Minecraft world more colorful by adding more flowers and plants.",
   "authors": [
     "EmilSG"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/EmilsGithub/Fantastic-Flowers",
+    "sources": "https://github.com/EmilsGithub/Fantastic-Flowers"
   },
 
   "license": "MIT",
