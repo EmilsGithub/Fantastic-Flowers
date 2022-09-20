@@ -36,10 +36,20 @@ public class ModConfiguredFeatures {
                     112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MAGENTA_LUPINE)))) );
 
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> BLUE_LUPINE_PLACED =
+            ConfiguredFeatures.register("blue_lupine", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
+                    112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLUE_LUPINE)))) );
+
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> BLUEBERRY_BUSH_PLACED =
             ConfiguredFeatures.register("blueberry_bush", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                     32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLUEBERRY_BUSH)))) );
+
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PRICKLY_PEAR_BLOCK_PLACED =
+            ConfiguredFeatures.register("prickly_pear_block", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
+                    32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PRICKLY_PEAR_BLOCK)))) );
 
     public static void registerConfiguredFeatures(){
         FantasticFlowers.LOGGER.debug("Registering the ModConfiguredFeatures for" + FantasticFlowers.MOD_ID);

@@ -32,7 +32,15 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.MAGENTA_LUPINE_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
             PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
+    public static final RegistryEntry<PlacedFeature> BLUE_LUPINE = PlacedFeatures.register("blue_lupine",
+            ModConfiguredFeatures.BLUE_LUPINE_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
     public static final RegistryEntry<PlacedFeature> BLUEBERRY_BUSH = PlacedFeatures.register("blueberry_bush",
             ModConfiguredFeatures.BLUEBERRY_BUSH_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> PRICKLY_PEAR_BLOCK = PlacedFeatures.register("prickly_pear_block",
+            ModConfiguredFeatures.PRICKLY_PEAR_BLOCK_PLACED, RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(),
             PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 }

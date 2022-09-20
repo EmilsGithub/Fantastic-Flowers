@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "fantasticflowers:block/magenta_lupine_top"
+    "layer0": "fantasticflowers:block/blue_lupine_top"
   }
 }

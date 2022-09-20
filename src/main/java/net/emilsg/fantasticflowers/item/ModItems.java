@@ -24,6 +24,11 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS)
                     .food(new FoodComponent.Builder().hunger(6).saturationModifier(4f).build())));
 
+    public static final Item PRICKLY_PEAR = registerItem("prickly_pear",
+            new AliasedBlockItem(ModBlocks.PRICKLY_PEAR_BLOCK,
+                    new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS)
+                            .food(new FoodComponent.Builder().hunger(2).saturationModifier(4f).build())));
+
 
 
     private static Item registerItem(String name, Item item){
