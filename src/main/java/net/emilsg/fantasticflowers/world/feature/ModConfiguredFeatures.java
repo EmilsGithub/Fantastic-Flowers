@@ -2,15 +2,16 @@ package net.emilsg.fantasticflowers.world.feature;
 
 import net.emilsg.fantasticflowers.FantasticFlowers;
 import net.emilsg.fantasticflowers.block.ModBlocks;
-import net.emilsg.fantasticflowers.block.custom.ModBlueBerryBushBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
+import java.util.List;
+
 
 public class ModConfiguredFeatures {
 
+    //Flowers and Plants
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> CLOVERS_PLACED =
             ConfiguredFeatures.register("clovers", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                     128, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
@@ -41,6 +42,12 @@ public class ModConfiguredFeatures {
                     112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.BLUE_LUPINE)))) );
 
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> WHITE_ROSE_BUSH_PLACED =
+            ConfiguredFeatures.register("white_rose_bush", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
+                    112, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.WHITE_ROSE_BUSH)))) );
+
+    //Bushes
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> BLUEBERRY_BUSH_PLACED =
             ConfiguredFeatures.register("blueberry_bush", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                     32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
@@ -50,6 +57,13 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("prickly_pear_block", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                     32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PRICKLY_PEAR_BLOCK)))) );
+
+    //Crop Seed Blocks
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> SANDY_SEED_CROP_PLACED =
+            ConfiguredFeatures.register("sandy_seed_crop", Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
+                    4, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.SANDY_SEED_CROP)))) );
+
 
     public static void registerConfiguredFeatures(){
         FantasticFlowers.LOGGER.debug("Registering the ModConfiguredFeatures for" + FantasticFlowers.MOD_ID);

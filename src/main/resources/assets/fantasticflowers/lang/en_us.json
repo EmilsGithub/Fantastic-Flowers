@@ -6,10 +6,24 @@
   "block.fantasticflowers.clovers": "Clovers",
   "block.fantasticflowers.magenta_lupine": "Magenta Lupine",
   "block.fantasticflowers.blue_lupine": "Blue Lupine",
+  "block.fantasticflowers.white_rose_bush": "White Rose Bush",
 
+  "block.fantasticflowers.sandy_seed_crop": "Sandy Seed Crop",
+
+  "itemGroup.fantasticflowers.fantasticflowers_food": "Fantastic Flowers Food",
   "itemGroup.fantasticflowers.fantasticflowers": "Fantastic Flowers",
 
   "item.fantasticflowers.prickly_pear": "Prickly Pear",
   "item.fantasticflowers.blueberries": "Blueberries",
-  "item.fantasticflowers.blueberry_pie": "Blueberry Pie"
+  "item.fantasticflowers.blueberry_pie": "Blueberry Pie",
+  "item.fantasticflowers.minced_beef": "Minced Beef",
+  "item.fantasticflowers.salt": "Salt",
+  "item.fantasticflowers.water": "Water",
+  "item.fantasticflowers.chili": "Chili",
+
+  "item.fantasticflowers.chili_seeds": "Chili Seeds",
+
+  "item.fantasticflowers.knife": "Knife",
+  "item.fantasticflowers.mortar_and_pestle": "Mortar and Pestle",
+  "item.fantasticflowers.glass_jar": "Glass Jar"
 }

@@ -22,6 +22,7 @@ public class CloversBlock extends PlantBlock implements Fertilizable{
 
     }
 
+
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }

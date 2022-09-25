@@ -29,11 +29,22 @@ public class ModFlowerGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,JUNGLE,FLOWER_FOREST,BIRCH_FOREST,MEADOW),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_LUPINE.getKey().get());
         //noinspection OptionalGetWithoutIsPresent
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA,SNOWY_TAIGA,OLD_GROWTH_PINE_TAIGA,OLD_GROWTH_SPRUCE_TAIGA),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUEBERRY_BUSH.getKey().get());
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,JUNGLE,FLOWER_FOREST,BIRCH_FOREST,MEADOW),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.WHITE_ROSE_BUSH.getKey().get());
+
+
+        //Cold
+        //noinspection OptionalGetWithoutIsPresent
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_HILLS,WINDSWEPT_GRAVELLY_HILLS,
+                WINDSWEPT_FOREST,TAIGA,OLD_GROWTH_PINE_TAIGA,OLD_GROWTH_SPRUCE_TAIGA,STONY_SHORE), GenerationStep.
+                Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUEBERRY_BUSH.getKey().get());
+        //Sandy
         //noinspection OptionalGetWithoutIsPresent
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT,BADLANDS,ERODED_BADLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PRICKLY_PEAR_BLOCK.getKey().get());
+        //noinspection OptionalGetWithoutIsPresent
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT,BADLANDS,ERODED_BADLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SANDY_SEED_CROP.getKey().get());
     }
 }
 

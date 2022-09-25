@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "fantasticflowers:block/chili_stage3"
+	}
+}

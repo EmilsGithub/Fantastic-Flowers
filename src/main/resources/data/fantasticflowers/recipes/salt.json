@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "fantasticflowers:water_items"
+  },
+  "result": "fantasticflowers:salt",
+  "experience": 0,
+  "cookingtime": 40
+}
