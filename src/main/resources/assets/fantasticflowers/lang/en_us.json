@@ -16,12 +16,20 @@
   "item.fantasticflowers.prickly_pear": "Prickly Pear",
   "item.fantasticflowers.blueberries": "Blueberries",
   "item.fantasticflowers.blueberry_pie": "Blueberry Pie",
+  "item.fantasticflowers.blueberry_jam": "Blueberry Jam",
   "item.fantasticflowers.minced_beef": "Minced Beef",
   "item.fantasticflowers.salt": "Salt",
   "item.fantasticflowers.water": "Water",
-  "item.fantasticflowers.chili": "Chili",
 
+  "item.fantasticflowers.chili": "Chili",
+  "item.fantasticflowers.tomato": "Tomato",
+  "item.fantasticflowers.green_bell_pepper": "Green Bell Pepper",
+  "item.fantasticflowers.red_bell_pepper": "Red Bell Pepper",
+  "item.fantasticflowers.yellow_bell_pepper": "Yellow Bell Pepper",
+
+  "item.fantasticflowers.bell_pepper_seeds": "Bell Pepper Seeds",
   "item.fantasticflowers.chili_seeds": "Chili Seeds",
+  "item.fantasticflowers.tomato_seeds": "Tomato Seeds",
 
   "item.fantasticflowers.knife": "Knife",
   "item.fantasticflowers.mortar_and_pestle": "Mortar and Pestle",

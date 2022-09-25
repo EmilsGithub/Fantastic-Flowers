@@ -23,8 +23,14 @@ public class ModBlocks {
 
     //Crop Blocks
 
+    public static final Block BELL_PEPPER_CROP = registerBlockWithoutItem("bell_pepper_crop",
+            new ModBellPepperBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+
     public static final Block CHILI_CROP = registerBlockWithoutItem("chili_crop",
             new ModChiliBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+
+    public static final Block TOMATO_CROP = registerBlockWithoutItem("tomato_crop",
+            new ModTomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
 
     //Small Flower Blocks
     public static final Block LAZARUS_BELL = registerBlock("lazarus_bell",

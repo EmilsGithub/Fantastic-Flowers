@@ -1,0 +1,147 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "fantasticflowers:green_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "fantasticflowers:yellow_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "fantasticflowers:red_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fantasticflowers:bell_pepper_seeds"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "fantasticflowers:bell_pepper_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "fantasticflowers:red_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "fantasticflowers:yellow_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "fantasticflowers:green_bell_pepper",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:binomial_with_bonus_count",
+          "parameters": {
+            "extra": 1,
+            "probability": 0.5
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "fantasticflowers:bell_pepper_crop",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

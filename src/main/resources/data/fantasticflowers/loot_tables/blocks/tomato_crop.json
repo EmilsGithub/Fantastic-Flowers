@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fantasticflowers:chili",
+          "name": "fantasticflowers:tomato",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "fantasticflowers:chili_crop",
+              "block": "fantasticflowers:tomato_crop",
               "properties": {
                 "age": "6"
               }
@@ -24,7 +24,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fantasticflowers:chili_seeds"
+          "name": "fantasticflowers:tomato_seeds"
         }
       ]
     },
@@ -34,11 +34,11 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "fantasticflowers:chili_seeds",
+          "name": "fantasticflowers:tomato_seeds",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "fantasticflowers:chili_crop",
+              "block": "fantasticflowers:tomato_crop",
               "properties": {
                 "age": "6"
               }
@@ -48,11 +48,11 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "fantasticflowers:chili",
+          "name": "fantasticflowers:tomato",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "fantasticflowers:chili_crop",
+              "block": "fantasticflowers:tomato_crop",
               "properties": {
                 "age": "6"
               }
@@ -72,7 +72,7 @@
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "fantasticflowers:chili_crop",
+              "block": "fantasticflowers:tomato_crop",
               "properties": {
                 "age": "6"
               }

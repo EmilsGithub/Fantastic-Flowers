@@ -15,9 +15,32 @@ public class ModItems {
     public static final Item CHILI_SEEDS = registerItem("chili_seeds",
             new AliasedBlockItem (ModBlocks.CHILI_CROP, new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS)));
 
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
+            new AliasedBlockItem (ModBlocks.TOMATO_CROP, new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS)));
+
+    public static final Item BELL_PEPPER_SEEDS = registerItem("bell_pepper_seeds",
+            new AliasedBlockItem (ModBlocks.BELL_PEPPER_CROP, new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS)));
+
     //Crops
 
+            //Bell Peppers
+    public static final Item RED_BELL_PEPPER = registerItem("red_bell_pepper",
+            new Item (new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+
+    public static final Item YELLOW_BELL_PEPPER = registerItem("yellow_bell_pepper",
+            new Item (new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+
+    public static final Item GREEN_BELL_PEPPER = registerItem("green_bell_pepper",
+            new Item (new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+            //end
     public static final Item CHILI = registerItem("chili",
+            new Item (new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
+                            .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+
+    public static final Item TOMATO = registerItem("tomato",
             new Item (new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
                             .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
 
@@ -45,6 +68,10 @@ public class ModItems {
     public static final Item BLUEBERRY_PIE = registerItem("blueberry_pie",
             new Item(new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
                     .food(new FoodComponent.Builder().hunger(6).saturationModifier(0.75f).build())));
+
+    public static final Item BLUEBERRY_JAM = registerItem("blueberry_jam",
+            new Item(new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
+                    .food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build())));
 
     public static final Item MINCED_BEEF = registerItem("minced_beef",
             new Item(new FabricItemSettings().group(ModItemGroup.FANTASTICFLOWERS_FOOD)
