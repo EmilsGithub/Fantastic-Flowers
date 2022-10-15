@@ -1,0 +1,46 @@
+{
+  "block.ffaf.lazarus_bell": "Lazarus Bell",
+  "block.ffaf.light_blue_forget_me_not": "Light Blue Forget-Me-Not",
+  "block.ffaf.white_forget_me_not": "White Forget-Me-Not",
+  "block.ffaf.pink_forget_me_not": "Pink Forget-Me-Not",
+  "block.ffaf.clovers": "Clovers",
+  "block.ffaf.magenta_lupine": "Magenta Lupine",
+  "block.ffaf.blue_lupine": "Blue Lupine",
+  "block.ffaf.white_rose_bush": "White Rose Bush",
+
+  "itemGroup.ffaf.ffaf_food": "Fantastic Flowers Food",
+  "itemGroup.ffaf.ffaf": "Fantastic Flowers",
+
+  "item.ffaf.blueberry_pie": "Blueberry Pie",
+  "item.ffaf.blueberry_jam": "Blueberry Jam",
+  "item.ffaf.minced_beef": "Minced Beef",
+  "item.ffaf.salt": "Salt",
+  "item.ffaf.water": "Water",
+  "item.ffaf.flour": "Flour",
+  "item.ffaf.dough": "Dough",
+
+  "item.ffaf.prickly_pear": "Prickly Pear",
+  "item.ffaf.blueberries": "Blueberries",
+  "item.ffaf.strawberry": "Strawberry",
+  "item.ffaf.onion": "Onion",
+  "item.ffaf.lettuce": "Lettuce",
+  "item.ffaf.chili": "Chili",
+  "item.ffaf.tomato": "Tomato",
+  "item.ffaf.eggplant": "Eggplant",
+  "item.ffaf.green_bell_pepper": "Green Bell Pepper",
+  "item.ffaf.red_bell_pepper": "Red Bell Pepper",
+  "item.ffaf.yellow_bell_pepper": "Yellow Bell Pepper",
+
+  "item.ffaf.lettuce_seeds": "Lettuce Seeds",
+  "item.ffaf.onion_seeds": "Onion Seeds",
+  "item.ffaf.strawberry_seeds": "Strawberry Seeds",
+  "item.ffaf.eggplant_seeds": "Eggplant Seeds",
+  "item.ffaf.bell_pepper_seeds": "Bell Pepper Seeds",
+  "item.ffaf.chili_seeds": "Chili Seeds",
+  "item.ffaf.tomato_seeds": "Tomato Seeds",
+  "item.ffaf.blueberry_seeds": "Blueberry Seeds",
+
+  "item.ffaf.knife": "Knife",
+  "item.ffaf.mortar_and_pestle": "Mortar and Pestle",
+  "item.ffaf.glass_jar": "Glass Jar"
+}

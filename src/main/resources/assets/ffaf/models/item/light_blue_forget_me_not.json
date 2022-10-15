@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ffaf:block/light_blue_forget_me_not"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "ffaf:mortar_and_pestle"
+    }
+  ],
+  "result": {
+    "item": "ffaf:flour"
+  }
+}

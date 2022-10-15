@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:tomato"
+    }
+  ],
+  "result": {
+    "item": "ffaf:tomato_seeds"
+  }
+}

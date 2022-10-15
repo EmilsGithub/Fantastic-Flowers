@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ffaf:block/pink_forget_me_not"
+  }
+}

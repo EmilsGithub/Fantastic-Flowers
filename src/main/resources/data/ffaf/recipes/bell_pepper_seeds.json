@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "ffaf:bell_peppers"
+    }
+  ],
+  "result": {
+    "item": "ffaf:bell_pepper_seeds"
+  }
+}

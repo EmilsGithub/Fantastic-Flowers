@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:chili"
+    }
+  ],
+  "result": {
+    "item": "ffaf:chili_seeds"
+  }
+}

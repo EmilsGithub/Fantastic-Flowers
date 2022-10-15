@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:blueberries"
+    },
+    {
+      "item": "ffaf:blueberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "ffaf:glass_jar"
+    }
+  ],
+  "result": {
+    "item": "ffaf:blueberry_jam"
+  }
+}

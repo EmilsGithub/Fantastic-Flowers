@@ -1,6 +1,0 @@
-{
-	"parent": "block/crop",
-	"textures": {
-		"crop": "fantasticflowers:block/tomato_stage2_3"
-	}
-}

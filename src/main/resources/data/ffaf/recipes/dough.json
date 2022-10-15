@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "ffaf:water_items"
+    },
+    {
+      "item": "ffaf:flour"
+    }
+  ],
+  "result": {
+    "item": "ffaf:dough"
+  }
+}

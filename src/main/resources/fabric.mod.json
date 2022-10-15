@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "fantasticflowers",
+  "id": "ffaf",
   "version": "${version}",
 
-  "name": "Fantastic Flowers",
-  "description": "Makes the Minecraft world more colorful by adding more flowers and plants.",
+  "name": "Fantastic Flowers And Farming",
+  "description": "Makes the Minecraft world more colorful by adding more flowers, plants and foods.",
   "authors": [
     "EmilSG"
   ],
@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.emilsg.fantasticflowers.FantasticFlowers"
+      "net.emilsg.ffaf.FantasticFlowersAndFarming"
     ],
     "client":[
-      "net.emilsg.fantasticflowers.FantasticFlowersClient"
+      "net.emilsg.ffaf.FantasticFlowersAndFarmingClient"
     ]
   },
   "mixins": [
-    "fantasticflowers.mixins.json"
+    "ffaf.mixins.json"
   ],
 
   "depends": {

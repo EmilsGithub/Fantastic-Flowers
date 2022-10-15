@@ -1,6 +1,0 @@
-{
-	"parent": "block/crop",
-	"textures": {
-		"crop": "fantasticflowers:block/bell_pepper_stage6"
-	}
-}

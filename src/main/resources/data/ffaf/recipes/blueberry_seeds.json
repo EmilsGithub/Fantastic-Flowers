@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:blueberries"
+    }
+  ],
+  "result": {
+    "item": "ffaf:blueberry_seeds"
+  }
+}

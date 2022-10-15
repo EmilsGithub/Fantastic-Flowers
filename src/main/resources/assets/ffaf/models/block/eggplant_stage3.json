@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "ffaf:block/eggplant_stage2_3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ffaf:block/light_blue_forget_me_not"
+  }
+}

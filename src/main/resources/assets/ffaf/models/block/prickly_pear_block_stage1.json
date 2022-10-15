@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ffaf:block/prickly_pear_block_stage1"
+  }
+}

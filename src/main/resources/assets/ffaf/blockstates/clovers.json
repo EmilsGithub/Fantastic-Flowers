@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ffaf:block/clovers"
+      },
+      {
+        "model": "ffaf:block/clovers",
+        "y": 90
+      },
+      {
+        "model": "ffaf:block/clovers",
+        "y": 180
+      },
+      {
+        "model": "ffaf:block/clovers",
+        "y": 270
+      },
+      {
+        "model": "ffaf:block/clovers_two"
+      },
+      {
+        "model": "ffaf:block/clovers_two",
+        "y": 90
+      },
+      {
+        "model": "ffaf:block/clovers_two",
+        "y": 180
+      },
+      {
+        "model": "ffaf:block/clovers_two",
+        "y": 270
+      }
+    ]
+  }
+}

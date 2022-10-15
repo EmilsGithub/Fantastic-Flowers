@@ -1,0 +1,11 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients":[
+    {
+      "item": "minecraft_air"
+    }
+  ],
+  "result": {
+    "item": "minecraft:barrier"
+  }
+}

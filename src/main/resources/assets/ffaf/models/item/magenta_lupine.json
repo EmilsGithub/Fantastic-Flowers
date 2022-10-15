@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ffaf:block/magenta_lupine_top"
+  }
+}

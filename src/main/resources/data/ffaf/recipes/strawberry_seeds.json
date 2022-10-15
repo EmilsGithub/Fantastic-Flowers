@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:strawberry"
+    }
+  ],
+  "result": {
+    "item": "ffaf:strawberry_seeds"
+  }
+}

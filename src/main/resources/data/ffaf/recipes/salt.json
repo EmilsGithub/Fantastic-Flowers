@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "ffaf:water_items"
+  },
+  "result": "ffaf:salt",
+  "experience": 0,
+  "cookingtime": 40
+}
