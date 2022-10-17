@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:milk_bucket"
+      "tag": "ffaf:milk_items"
     },
     "S": {
       "item": "minecraft:sugar"

@@ -1,0 +1,66 @@
+{
+  "display": {
+    "icon": {
+      "item": "ffaf:red_bell_pepper"
+    },
+    "title": "Pepper Paradise",
+    "description": "Harvest every variety of bell peppers.",
+    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "yellow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ffaf:yellow_bell_pepper"
+            ]
+          }
+        ]
+      }
+    },
+    "green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ffaf:green_bell_pepper"
+            ]
+          }
+        ]
+      }
+    },
+    "red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ffaf:red_bell_pepper"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "yellow"
+    ],
+    [
+      "green"
+    ],
+    [
+      "red"
+    ]
+  ],
+  "rewards": {
+    "experience": 10
+  }
+}

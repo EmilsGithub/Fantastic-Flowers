@@ -8,21 +8,34 @@
   "block.ffaf.blue_lupine": "Blue Lupine",
   "block.ffaf.white_rose_bush": "White Rose Bush",
 
+  "block.ffaf.sand_salt_ore": "Sand Salt Ore",
+
   "itemGroup.ffaf.ffaf_food": "Fantastic Flowers Food",
   "itemGroup.ffaf.ffaf": "Fantastic Flowers",
 
   "item.ffaf.blueberry_pie": "Blueberry Pie",
   "item.ffaf.blueberry_jam": "Blueberry Jam",
   "item.ffaf.minced_beef": "Minced Beef",
+  "item.ffaf.onigiri": "Onigiri",
+  "item.ffaf.ramen": "Ramen",
+  "item.ffaf.rice_bowl": "Rice Bowl",
+  "item.ffaf.sushi": "Sushi",
+
+
   "item.ffaf.salt": "Salt",
+  "item.ffaf.milk": "Milk",
   "item.ffaf.water": "Water",
   "item.ffaf.flour": "Flour",
   "item.ffaf.dough": "Dough",
 
+  "item.ffaf.raspberry": "Raspberry",
+  "item.ffaf.cabbage": "Cabbage",
   "item.ffaf.prickly_pear": "Prickly Pear",
   "item.ffaf.blueberries": "Blueberries",
   "item.ffaf.strawberry": "Strawberry",
+  "item.ffaf.peas": "Peas",
   "item.ffaf.onion": "Onion",
+  "item.ffaf.garlic": "Garlic",
   "item.ffaf.lettuce": "Lettuce",
   "item.ffaf.chili": "Chili",
   "item.ffaf.tomato": "Tomato",
@@ -32,15 +45,23 @@
   "item.ffaf.yellow_bell_pepper": "Yellow Bell Pepper",
 
   "item.ffaf.lettuce_seeds": "Lettuce Seeds",
+  "item.ffaf.prickly_pear_seeds": "Prickly Pear Seeds",
+  "item.ffaf.pea_seeds": "Pea Seeds",
+  "item.ffaf.cabbage_seeds": "Cabbage Seeds",
   "item.ffaf.onion_seeds": "Onion Seeds",
+  "item.ffaf.garlic_seeds": "Garlic Seeds",
   "item.ffaf.strawberry_seeds": "Strawberry Seeds",
   "item.ffaf.eggplant_seeds": "Eggplant Seeds",
   "item.ffaf.bell_pepper_seeds": "Bell Pepper Seeds",
   "item.ffaf.chili_seeds": "Chili Seeds",
   "item.ffaf.tomato_seeds": "Tomato Seeds",
   "item.ffaf.blueberry_seeds": "Blueberry Seeds",
+  "item.ffaf.raspberry_seeds": "Raspberry Seeds",
 
   "item.ffaf.knife": "Knife",
+  "item.ffaf.butcher_knife": "Butcher Knife",
   "item.ffaf.mortar_and_pestle": "Mortar and Pestle",
+  "item.ffaf.frying_pan": "Frying Pan",
+  "item.ffaf.cooking_pot": "Cooking Pot",
   "item.ffaf.glass_jar": "Glass Jar"
 }

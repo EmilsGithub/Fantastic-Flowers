@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:prickly_pear"
+    }
+  ],
+  "result": {
+    "item": "ffaf:prickly_pear_seeds"
+  }
+}

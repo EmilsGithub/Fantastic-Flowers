@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:raspberry"
+    }
+  ],
+  "result": {
+    "item": "ffaf:raspberry_seeds"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:cabbage"
+    }
+  ],
+  "result": {
+    "item": "ffaf:cabbage_seeds"
+  }
+}

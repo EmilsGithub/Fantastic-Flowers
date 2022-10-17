@@ -1,86 +1,90 @@
 {
   "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ffaf:prickly_pear",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:prickly_pear_block",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ffaf:prickly_pear_seeds"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "ffaf:prickly_pear_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:prickly_pear_block",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "ffaf:prickly_pear",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:prickly_pear_block",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:binomial_with_bonus_count",
+          "parameters": {
+            "extra": 1,
+            "probability": 0.5
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:prickly_pear_block",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "functions": [
     {
       "function": "minecraft:explosion_decay"
-    }
-  ],
-  "pools": [
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "block": "ffaf:prickly_pear_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "3"
-          }
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "ffaf:prickly_pear"
-        }
-      ],
-      "functions": [
-        {
-          "add": false,
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 3.0,
-            "min": 2.0
-          },
-          "function": "minecraft:set_count"
-        },
-        {
-          "enchantment": "minecraft:fortune",
-          "formula": "minecraft:uniform_bonus_count",
-          "function": "minecraft:apply_bonus",
-          "parameters": {
-            "bonusMultiplier": 1
-          }
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "block": "ffaf:prickly_pear_block",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "age": "2"
-          }
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "ffaf:prickly_pear"
-        }
-      ],
-      "functions": [
-        {
-          "add": false,
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 2.0,
-            "min": 1.0
-          },
-          "function": "minecraft:set_count"
-        },
-        {
-          "enchantment": "minecraft:fortune",
-          "formula": "minecraft:uniform_bonus_count",
-          "function": "minecraft:apply_bonus",
-          "parameters": {
-            "bonusMultiplier": 1
-          }
-        }
-      ],
-      "rolls": 1.0
     }
   ]
 }

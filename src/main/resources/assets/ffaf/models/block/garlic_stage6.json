@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "ffaf:block/garlic_stage6"
+  }
+}

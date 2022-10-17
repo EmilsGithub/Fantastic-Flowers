@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ffaf:raspberry",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:raspberry_bush",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ffaf:raspberry_seeds"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "ffaf:raspberry_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:raspberry_bush",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "ffaf:raspberry",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:raspberry_bush",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:binomial_with_bonus_count",
+          "parameters": {
+            "extra": 1,
+            "probability": 0.5
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "ffaf:raspberry_bush",
+              "properties": {
+                "age": "6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

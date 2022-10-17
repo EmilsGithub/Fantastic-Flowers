@@ -92,7 +92,29 @@
         {
           "type": "minecraft:item",
           "weight": 1,
+          "name": "ffaf:pea_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.08
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
           "name": "ffaf:lettuce_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.08
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "ffaf:raspberry_seeds",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -126,6 +148,17 @@
           "type": "minecraft:item",
           "weight": 1,
           "name": "ffaf:blueberry_seeds",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.08
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "ffaf:cabbage_seeds",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

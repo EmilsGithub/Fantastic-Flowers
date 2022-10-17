@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ffaf:block/raspberry_stage3"
+  }
+}

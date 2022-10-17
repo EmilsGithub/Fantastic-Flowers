@@ -1,10 +1,16 @@
 package net.emilsg.ffaf.world.feature;
 
+import com.mojang.datafixers.types.templates.Tag;
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.ModBlocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+
+import java.util.List;
 
 
 public class ModConfiguredFeatures {
@@ -51,7 +57,12 @@ public class ModConfiguredFeatures {
                     32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PRICKLY_PEAR_BLOCK)))) );
 
+    //Ores
+    public static final List<OreFeatureConfig.Target> OVERWORLD_SAND_SALT_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.SAND), ModBlocks.SAND_SALT_ORE.getDefaultState()));
 
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SAND_SALT_ORE =
+            ConfiguredFeatures.register("sand_salt_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_SAND_SALT_ORES, 12));
 
     public static void registerConfiguredFeatures(){
         FantasticFlowersAndFarming.LOGGER.debug("Registering the ModConfiguredFeatures for" + FantasticFlowersAndFarming.MOD_ID);

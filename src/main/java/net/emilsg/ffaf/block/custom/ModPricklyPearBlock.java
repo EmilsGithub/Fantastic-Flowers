@@ -29,6 +29,8 @@ public class ModPricklyPearBlock extends SweetBerryBushBlock {
         super(settings);
     }
 
+
+
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(BlockTags.SAND);
@@ -52,7 +54,7 @@ public class ModPricklyPearBlock extends SweetBerryBushBlock {
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(ModItems.PRICKLY_PEAR);
+        return new ItemStack(ModItems.PRICKLY_PEAR_SEEDS);
     }
 
     @Override
