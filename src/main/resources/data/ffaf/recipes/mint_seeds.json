@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:mint"
+    }
+  ],
+  "result": {
+    "item": "ffaf:mint_seeds"
+  }
+}

@@ -52,4 +52,12 @@ public class ModRaspberryBlock extends SweetBerryBushBlock {
             return super.onUse(state, world, pos, player, hand, hit);
         }
     }
+
+    @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (entity instanceof LivingEntity && entity.getType() != EntityType.RABBIT && entity.getType() != EntityType.VILLAGER && entity.getType()
+                != EntityType.WOLF && entity.getType() != EntityType.CAT) {
+            entity.slowMovement(state, new Vec3d(0.800000011920929D, 0.75D, 0.800000011920929D));
+        }
+    }
 }

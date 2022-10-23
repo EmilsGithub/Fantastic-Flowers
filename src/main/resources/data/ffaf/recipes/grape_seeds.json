@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:grapes"
+    }
+  ],
+  "result": {
+    "item": "ffaf:grape_seeds"
+  }
+}

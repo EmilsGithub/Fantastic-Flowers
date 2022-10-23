@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "ffaf:block/mint_stage4_5"
+  }
+}

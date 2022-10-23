@@ -3,6 +3,7 @@ package net.emilsg.ffaf;
 import net.emilsg.ffaf.block.ModBlocks;
 import net.emilsg.ffaf.item.ModItems;
 import net.emilsg.ffaf.mixin.ItemAccessor;
+import net.emilsg.ffaf.util.ModLootTableModifiers;
 import net.emilsg.ffaf.world.feature.ModConfiguredFeatures;
 import net.emilsg.ffaf.world.gen.ModOreGeneration;
 import net.emilsg.ffaf.world.gen.ModWorldGen;
@@ -25,8 +26,9 @@ public class FantasticFlowersAndFarming implements ModInitializer {
 		((ItemAccessor)ModItems.BUTCHER_KNIFE).setRecipeRemainder(ModItems.BUTCHER_KNIFE);
 		((ItemAccessor)ModItems.COOKING_POT).setRecipeRemainder(ModItems.COOKING_POT);
 
+		ModLootTableModifiers.modifyLootTables();
+
 		ModBlocks.registerModBlocks();
-		ModOreGeneration.generateOres();
 		ModWorldGen.generateModWorldGen();
 
 

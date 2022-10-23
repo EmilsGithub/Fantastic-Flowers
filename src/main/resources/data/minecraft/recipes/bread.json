@@ -1,11 +1,9 @@
 {
-  "type": "crafting_shapeless",
-  "ingredients":[
-    {
-      "item": "minecraft_air"
-    }
-  ],
-  "result": {
-    "item": "minecraft:barrier"
-  }
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ffaf:dough"
+  },
+  "result": "minecraft:bread",
+  "experience": 0.2,
+  "cookingtime": 200
 }

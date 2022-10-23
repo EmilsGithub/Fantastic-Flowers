@@ -2,6 +2,7 @@ package net.emilsg.ffaf.item;
 
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.ModBlocks;
+import net.emilsg.ffaf.item.custom.ModSeedBagItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -10,8 +11,15 @@ import net.minecraft.util.registry.Registry;
 public class ModItems {
 
 
+    //Custom
+
+    public static final Item SEED_BAG = registerItem("seed_bag", new ModSeedBagItem(new FabricItemSettings().group(ModItemGroup.FFAF)));
+
     //Seeds
 
+    public static final Item MINT_SEEDS = registerItem("mint_seeds", new AliasedBlockItem(ModBlocks.MINT_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
+    public static final Item GRAPE_SEEDS = registerItem("grape_seeds", new AliasedBlockItem(ModBlocks.GRAPE_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
+    public static final Item RICE_SEEDS = registerItem("rice_seeds", new AliasedBlockItem(ModBlocks.RICE_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item CABBAGE_SEEDS = registerItem("cabbage_seeds", new AliasedBlockItem(ModBlocks.CABBAGE_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item PRICKLY_PEAR_SEEDS = registerItem("prickly_pear_seeds", new AliasedBlockItem(ModBlocks.PRICKLY_PEAR_BLOCK, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item RASPBERRY_SEEDS = registerItem("raspberry_seeds", new AliasedBlockItem(ModBlocks.RASPBERRY_BUSH, new FabricItemSettings().group(ModItemGroup.FFAF)));
@@ -28,6 +36,9 @@ public class ModItems {
 
     //Crops
 
+    public static final Item MINT = registerItem("mint", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item GRAPES = registerItem("grapes", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item RICE = registerItem("rice", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item CABBAGE = registerItem("cabbage", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item PEAS = registerItem("peas", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item GARLIC = registerItem("garlic", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
@@ -46,8 +57,6 @@ public class ModItems {
     public static final Item RASPBERRY = registerItem("raspberry", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item PRICKLY_PEAR = registerItem("prickly_pear", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
 
-
-
     //Ingredients
 
     public static final Item MILK = registerItem("milk", new Item (new FabricItemSettings().group(ModItemGroup.FFAF)));
@@ -56,6 +65,9 @@ public class ModItems {
     public static final Item DOUGH = registerItem("dough", new Item (new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item WATER = registerItem("water", new Item (new FabricItemSettings().group(ModItemGroup.FFAF)));
 
+    //Sea
+
+    public static final Item Squid = registerItem("squid", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
 
     //Food
 
@@ -65,7 +77,7 @@ public class ModItems {
     public static final Item ONIGIRI = registerItem("onigiri", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.75f).build())));
     public static final Item BLUEBERRY_PIE = registerItem("blueberry_pie", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.75f).build())));
     public static final Item BLUEBERRY_JAM = registerItem("blueberry_jam", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build())));
-    public static final Item MINCED_BEEF = registerItem("minced_beef", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item MINCED_BEEF = registerItem("minced_beef", new Item(new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f).build())));
 
     //Food Processing
 

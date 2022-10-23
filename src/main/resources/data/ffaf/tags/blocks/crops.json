@@ -1,18 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ffaf:raspberry_bush",
-    "ffaf:prickly_pear_block",
-    "ffaf:cabbage_crop",
-    "ffaf:blueberry_crop",
-    "ffaf:strawberry_crop",
-    "ffaf:pea_crop",
-    "ffaf:onion_crop",
-    "ffaf:garlic_crop",
-    "ffaf:lettuce_crop",
-    "ffaf:chili_crop",
-    "ffaf:tomato_crop",
-    "ffaf:eggplant_crop",
-    "ffaf:bell_pepper_crop"
+
   ]
 }

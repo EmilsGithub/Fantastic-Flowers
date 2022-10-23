@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:rice"
+    }
+  ],
+  "result": {
+    "item": "ffaf:rice_seeds"
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        "ffaf:grape_seeds",
+        "ffaf:rice_seeds",
+        "ffaf:cabbage_seeds",
+        "ffaf:prickly_pear_seeds",
+        "ffaf:raspberry_seeds",
+        "ffaf:pea_seeds",
+        "ffaf:garlic_seeds",
+        "ffaf:strawberry_seeds",
+        "ffaf:onion_seeds",
+        "ffaf:eggplant_seeds",
+        "ffaf:blueberry_seeds",
+        "ffaf:chili_seeds",
+        "ffaf:tomato_seeds",
+        "ffaf:lettuce_seeds",
+        "ffaf:bell_pepper_seeds",
+        "ffaf:mint_seeds"
+    ]
+}

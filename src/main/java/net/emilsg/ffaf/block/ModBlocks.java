@@ -23,6 +23,9 @@ public class ModBlocks {
 
     //Crop Blocks
 
+    public static final Block MINT_CROP = registerBlockWithoutItem("mint_crop", new ModGrapeBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block GRAPE_CROP = registerBlockWithoutItem("grape_crop", new ModGrapeBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block RICE_CROP = registerBlockWithoutItem("rice_crop", new ModRiceBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block CABBAGE_CROP = registerBlockWithoutItem("cabbage_crop", new ModCabbageBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block PEA_CROP = registerBlockWithoutItem("pea_crop", new ModPeaBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block GARLIC_CROP = registerBlockWithoutItem("garlic_crop", new ModGarlicBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));

@@ -10,8 +10,8 @@
 
   "block.ffaf.sand_salt_ore": "Sand Salt Ore",
 
-  "itemGroup.ffaf.ffaf_food": "Fantastic Flowers Food",
-  "itemGroup.ffaf.ffaf": "Fantastic Flowers",
+  "itemGroup.ffaf.ffaf_food": "Fantastic Flowers And Farming Food",
+  "itemGroup.ffaf.ffaf": "Fantastic Flowers And Farming",
 
   "item.ffaf.blueberry_pie": "Blueberry Pie",
   "item.ffaf.blueberry_jam": "Blueberry Jam",
@@ -21,6 +21,7 @@
   "item.ffaf.rice_bowl": "Rice Bowl",
   "item.ffaf.sushi": "Sushi",
 
+  "item.ffaf.squid": "Squid",
 
   "item.ffaf.salt": "Salt",
   "item.ffaf.milk": "Milk",
@@ -28,6 +29,9 @@
   "item.ffaf.flour": "Flour",
   "item.ffaf.dough": "Dough",
 
+  "item.ffaf.mint": "Mint",
+  "item.ffaf.grapes": "Grapes",
+  "item.ffaf.rice": "Rice",
   "item.ffaf.raspberry": "Raspberry",
   "item.ffaf.cabbage": "Cabbage",
   "item.ffaf.prickly_pear": "Prickly Pear",
@@ -44,6 +48,9 @@
   "item.ffaf.red_bell_pepper": "Red Bell Pepper",
   "item.ffaf.yellow_bell_pepper": "Yellow Bell Pepper",
 
+  "item.ffaf.mint_seeds": "Mint Seeds",
+  "item.ffaf.grape_seeds": "Grape Seeds",
+  "item.ffaf.rice_seeds": "Rice Seeds",
   "item.ffaf.lettuce_seeds": "Lettuce Seeds",
   "item.ffaf.prickly_pear_seeds": "Prickly Pear Seeds",
   "item.ffaf.pea_seeds": "Pea Seeds",
@@ -63,5 +70,6 @@
   "item.ffaf.mortar_and_pestle": "Mortar and Pestle",
   "item.ffaf.frying_pan": "Frying Pan",
   "item.ffaf.cooking_pot": "Cooking Pot",
-  "item.ffaf.glass_jar": "Glass Jar"
+  "item.ffaf.glass_jar": "Glass Jar",
+  "item.ffaf.seed_bag": "Seed Bag"
 }
