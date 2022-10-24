@@ -16,6 +16,9 @@
         "ffaf:tomato_seeds",
         "ffaf:lettuce_seeds",
         "ffaf:bell_pepper_seeds",
-        "ffaf:mint_seeds"
+        "ffaf:mint_seeds",
+        "ffaf:corn_seeds",
+        "ffaf:sweet_potato",
+        "ffaf:mustard_seeds"
     ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "ffaf:block/sweet_potato_stage2_3"
+  }
+}

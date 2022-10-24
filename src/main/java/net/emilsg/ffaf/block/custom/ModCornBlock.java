@@ -18,11 +18,11 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class ModRiceBlock extends CropBlock implements FluidFillable {
+public class ModCornBlock extends CropBlock {
 
     public static final IntProperty AGE = IntProperty.of("age", 0, 6);
 
-    public ModRiceBlock(Settings settings) {
+    public ModCornBlock(Settings settings) {
         super(settings);
     }
 
@@ -41,34 +41,8 @@ public class ModRiceBlock extends CropBlock implements FluidFillable {
             Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D)};
 
     @Override
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(BlockTags.DIRT);
-    }
-
-    @Nullable
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        return fluidState.isIn(FluidTags.WATER) && fluidState.getLevel() == 8 ? super.getPlacementState(ctx) : null;
-    }
-
-    @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        BlockState blockState = super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-        if (!blockState.isAir()) {
-            world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-        }
-
-        return blockState;
-    }
-
-    @Override
     protected ItemConvertible getSeedsItem() {
-        return ModItems.RICE_SEEDS;
-    }
-
-    @Override
-    public FluidState getFluidState(BlockState state) {
-        return Fluids.WATER.getStill(false);
+        return ModItems.CORN_SEEDS;
     }
 
     @Override
@@ -84,15 +58,5 @@ public class ModRiceBlock extends CropBlock implements FluidFillable {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(AGE);
-    }
-
-    @Override
-    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
-        return false;
-    }
-
-    @Override
-    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
-        return false;
     }
 }

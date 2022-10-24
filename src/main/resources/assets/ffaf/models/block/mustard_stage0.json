@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "ffaf:block/mustard_stage0_1"
+  }
+}

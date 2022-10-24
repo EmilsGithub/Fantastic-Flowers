@@ -15,8 +15,15 @@ public class ModItems {
 
     public static final Item SEED_BAG = registerItem("seed_bag", new ModSeedBagItem(new FabricItemSettings().group(ModItemGroup.FFAF)));
 
+    //Crops that are also Seeds
+    public static final Item MUSTARD_SEEDS = registerItem("mustard_seeds", new AliasedBlockItem(ModBlocks.MUSTARD_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)
+            .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item SWEET_POTATO = registerItem("sweet_potato", new AliasedBlockItem(ModBlocks.SWEET_POTATO_CROP, new FabricItemSettings().group(ModItemGroup.FFAF_FOOD)
+            .food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+
     //Seeds
 
+    public static final Item CORN_SEEDS = registerItem("corn_seeds", new AliasedBlockItem(ModBlocks.CORN_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item MINT_SEEDS = registerItem("mint_seeds", new AliasedBlockItem(ModBlocks.MINT_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item GRAPE_SEEDS = registerItem("grape_seeds", new AliasedBlockItem(ModBlocks.GRAPE_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
     public static final Item RICE_SEEDS = registerItem("rice_seeds", new AliasedBlockItem(ModBlocks.RICE_CROP, new FabricItemSettings().group(ModItemGroup.FFAF)));
@@ -36,6 +43,7 @@ public class ModItems {
 
     //Crops
 
+    public static final Item CORN = registerItem("corn", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item MINT = registerItem("mint", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item GRAPES = registerItem("grapes", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item RICE = registerItem("rice", new Item (new FabricItemSettings().group(ModItemGroup.FFAF_FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
