@@ -19,7 +19,7 @@ public class ModLootTableModifiers {
     private static final Identifier BASTION_OTHER_CHEST_ID = new Identifier("minecraft","chests/bastion_other");
     private static final Identifier BASTION_TREASURE_CHEST_ID = new Identifier("minecraft","chests/bastion_treasure");
     private static final Identifier DESERT_PYRAMID_CHEST_ID = new Identifier("minecraft","chests/desert_pyramid");
-    private static final Identifier END_CITY_TRESURE_CHEST_ID = new Identifier("minecraft","chests/end_city_treasure");
+    private static final Identifier END_CITY_TREASURE_CHEST_ID = new Identifier("minecraft","chests/end_city_treasure");
     private static final Identifier JUNGLE_TEMPLE_CHEST_ID = new Identifier("minecraft","chests/jungle_temple");
     private static final Identifier IGLOO_STRUCTURE_CHEST_ID = new Identifier("minecraft","chests/igloo_chest");
     private static final Identifier NETHER_BRIDGE_CHEST_ID = new Identifier("minecraft","chests/nether_bridge");
@@ -109,7 +109,7 @@ public class ModLootTableModifiers {
             tableBuilder.pool(poolBuilder.build());
         }});
 
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> { if (END_CITY_TRESURE_CHEST_ID.equals(id)){
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> { if (END_CITY_TREASURE_CHEST_ID.equals(id)){
             LootPool.Builder poolBuilder = LootPool.builder().rolls(ConstantLootNumberProvider.create(1)).conditionally(RandomChanceLootCondition.
                     builder(0.5f)).with(ItemEntry.builder(ModItems.SEED_BAG)).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create
                     (2f, 4f)).build());

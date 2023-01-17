@@ -25,6 +25,9 @@
     ],
     "client":[
       "net.emilsg.ffaf.FantasticFlowersAndFarmingClient"
+    ],
+    "fabric-datagen":[
+      "net.emilsg.ffaf.datagen.ModDataGeneration"
     ]
   },
   "mixins": [

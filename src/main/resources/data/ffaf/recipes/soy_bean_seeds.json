@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:soy_bean"
+    }
+  ],
+  "result": {
+    "item": "ffaf:soy_bean_seeds"
+  }
+}

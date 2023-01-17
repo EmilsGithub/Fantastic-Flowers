@@ -11,6 +11,6 @@ public class ModOreGeneration {
     public static void generateOres()   {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(OCEAN,COLD_OCEAN,DEEP_COLD_OCEAN,DEEP_OCEAN,
         DEEP_FROZEN_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,FROZEN_OCEAN,LUKEWARM_OCEAN,WARM_OCEAN,RIVER,FROZEN_RIVER),
-        GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.SAND_SALT_ORE_PLACED.getKey().get());
+        GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.SAND_SALT_ORE_PLACED_KEY);
     }
 }

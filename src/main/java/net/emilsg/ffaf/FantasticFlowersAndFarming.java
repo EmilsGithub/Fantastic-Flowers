@@ -1,6 +1,7 @@
 package net.emilsg.ffaf;
 
 import net.emilsg.ffaf.block.ModBlocks;
+import net.emilsg.ffaf.item.ModItemGroup;
 import net.emilsg.ffaf.item.ModItems;
 import net.emilsg.ffaf.mixin.ItemAccessor;
 import net.emilsg.ffaf.util.ModLootTableModifiers;
@@ -18,10 +19,11 @@ public class FantasticFlowersAndFarming implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModItemGroup.registerItemGroups();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		ModLootTableModifiers.modifyLootTables();
 
 		ModRegistries.registerModstuffs();

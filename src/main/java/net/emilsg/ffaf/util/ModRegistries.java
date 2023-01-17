@@ -21,6 +21,7 @@ public class ModRegistries {
         ((ItemAccessor)ModItems.FRYING_PAN).setRecipeRemainder(ModItems.FRYING_PAN);
         ((ItemAccessor)ModItems.BUTCHER_KNIFE).setRecipeRemainder(ModItems.BUTCHER_KNIFE);
         ((ItemAccessor)ModItems.COOKING_POT).setRecipeRemainder(ModItems.COOKING_POT);
+        ((ItemAccessor)ModItems.WAFFLE_IRON).setRecipeRemainder(ModItems.WAFFLE_IRON);
     }
 
     private static void registerCustomTrades() {

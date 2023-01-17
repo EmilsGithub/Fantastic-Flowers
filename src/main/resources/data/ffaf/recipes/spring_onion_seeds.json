@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ffaf:spring_onion"
+    }
+  ],
+  "result": {
+    "item": "ffaf:spring_onion_seeds"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ffaf:block/pineapple_stage2_3"
+  }
+}

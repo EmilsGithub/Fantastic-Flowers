@@ -1,6 +1,11 @@
 package net.emilsg.ffaf.world.feature;
 
-import net.minecraft.util.registry.RegistryEntry;
+import net.emilsg.ffaf.FantasticFlowersAndFarming;
+import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
@@ -9,45 +14,69 @@ import java.util.List;
 
 
 public class ModPlacedFeatures {
-    //Vegetation
-    public static final RegistryEntry<PlacedFeature> CLOVERS_PLACED = PlacedFeatures.register("clovers_placed",
-            ModConfiguredFeatures.CLOVERS_PLACED, RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> LIGHT_BLUE_FORGET_ME_NOT_PLACED = PlacedFeatures.register("light_blue_forget_me_not_placed",
-            ModConfiguredFeatures.LIGHT_BLUE_FORGET_ME_NOT_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> PINK_FORGET_ME_NOT_PLACED = PlacedFeatures.register("pink_forget_me_not_placed",
-            ModConfiguredFeatures.PINK_FORGET_ME_NOT_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> WHITE_FORGET_ME_NOT_PLACED = PlacedFeatures.register("white_forget_me_not_placed",
-            ModConfiguredFeatures.WHITE_FORGET_ME_NOT_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> MAGENTA_LUPINE = PlacedFeatures.register("magenta_lupine",
-            ModConfiguredFeatures.MAGENTA_LUPINE_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> BLUE_LUPINE = PlacedFeatures.register("blue_lupine",
-            ModConfiguredFeatures.BLUE_LUPINE_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> WHITE_ROSE_BUSH = PlacedFeatures.register("white_rose_bush",
-            ModConfiguredFeatures.WHITE_ROSE_BUSH_PLACED, RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
-
-    public static final RegistryEntry<PlacedFeature> PRICKLY_PEAR_BLOCK = PlacedFeatures.register("prickly_pear_block",
-            ModConfiguredFeatures.PRICKLY_PEAR_BLOCK_PLACED, RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(),
-            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
 
+    public static final RegistryKey<PlacedFeature> CLOVERS_PLACED_KEY = registerKey("clovers_placed");
+    public static final RegistryKey<PlacedFeature> LIGHT_BLUE_FORGET_ME_NOT_PLACED_KEY = registerKey("light_blue_forget_me_not_placed");
+    public static final RegistryKey<PlacedFeature> PINK_FORGET_ME_NOT_PLACED_KEY = registerKey("pink_forget_me_not_placed");
+    public static final RegistryKey<PlacedFeature> WHITE_FORGET_ME_NOT_PLACED_KEY = registerKey("white_forget_me_not_placed");
+    public static final RegistryKey<PlacedFeature> MAGENTA_LUPINE_PLACED_KEY = registerKey("magenta_lupine_placed");
+    public static final RegistryKey<PlacedFeature> BLUE_LUPINE_PLACED_KEY = registerKey("blue_lupine_placed");
+    public static final RegistryKey<PlacedFeature> WHITE_ROSE_BUSH_PLACED_KEY = registerKey("white_rose_bush_placed");
+    public static final RegistryKey<PlacedFeature> TRUFFLE_CROP_PLACED_KEY = registerKey("truffle_crop_placed");
+    public static final RegistryKey<PlacedFeature> PRICKLY_PEAR_BLOCK_PLACED_KEY = registerKey("prickly_pear_block_placed");
 
-    public static final RegistryEntry<PlacedFeature> SAND_SALT_ORE_PLACED = PlacedFeatures.register("sand_salt_ore_placed",
-            ModConfiguredFeatures.SAND_SALT_ORE, modifiersWithCount(32,
-                    HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(80))));
+    public static final RegistryKey<PlacedFeature> SAND_SALT_ORE_PLACED_KEY = registerKey("sand_salt_ore_placed");
 
+    public static void bootstrap(Registerable<PlacedFeature> context) {
+        var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, CLOVERS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CLOVERS_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, LIGHT_BLUE_FORGET_ME_NOT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LIGHT_BLUE_FORGET_ME_NOT_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, PINK_FORGET_ME_NOT_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PINK_FORGET_ME_NOT_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, WHITE_ROSE_BUSH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WHITE_ROSE_BUSH_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, MAGENTA_LUPINE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MAGENTA_LUPINE_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, BLUE_LUPINE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.BLUE_LUPINE_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, WHITE_ROSE_BUSH_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.WHITE_ROSE_BUSH_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, TRUFFLE_CROP_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TRUFFLE_CROP_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, PRICKLY_PEAR_BLOCK_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PRICKLY_PEAR_BLOCK_KEY),
+                RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+        register(context, SAND_SALT_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SAND_SALT_ORE_KEY),
+                modifiersWithCount(16,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(80))));
+    }
+
+    public static RegistryKey<PlacedFeature> registerKey(String name) {
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(FantasticFlowersAndFarming.MOD_ID, name));
+    }
+
+    private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+    }
+
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
+                                                                                   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+                                                                                   PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
+    }
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());

@@ -1,6 +1,6 @@
 {
-  "parent": "block/crop",
+  "parent": "block/cross",
   "textures": {
-    "crop": "ffaf:block/cabbage_stage4_5"
+    "cross": "ffaf:block/cabbage_stage4_5"
   }
 }

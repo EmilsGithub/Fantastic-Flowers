@@ -1,9 +1,9 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "ffaf:block/corn_stage3_bottom",
-    "bottom": "ffaf:block/corn_stage3_bottom",
-    "top": "ffaf:block/corn_stage3_top"
+    "particle": "ffaf:block/corn_stage4_top",
+    "bottom": "ffaf:block/corn_stage4_bottom",
+    "top": "ffaf:block/corn_stage4_top"
   },
   "elements": [
     { "from": [ 4, -1, 0 ],

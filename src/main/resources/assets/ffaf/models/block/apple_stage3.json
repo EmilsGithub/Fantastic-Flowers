@@ -1,0 +1,7 @@
+{
+  "parent": "ffaf:block/fruit_leaves",
+  "textures": {
+    "all": "minecraft:block/oak_leaves",
+    "fruit": "ffaf:block/apple_stage3"
+  }
+}

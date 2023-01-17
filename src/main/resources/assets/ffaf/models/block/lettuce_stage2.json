@@ -1,6 +1,6 @@
 {
-  "parent": "block/crop",
+  "parent": "block/cross",
   "textures": {
-    "crop": "ffaf:block/lettuce_stage2_3"
+    "cross": "ffaf:block/lettuce_stage2_3"
   }
 }

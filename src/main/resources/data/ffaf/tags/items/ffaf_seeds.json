@@ -19,6 +19,10 @@
         "ffaf:mint_seeds",
         "ffaf:corn_seeds",
         "ffaf:sweet_potato",
-        "ffaf:mustard_seeds"
+        "ffaf:mustard_seeds",
+        "ffaf:broccoli_seeds",
+        "ffaf:peanut",
+        "ffaf:spring_onion_seeds",
+        "ffaf:soy_bean_seeds"
     ]
 }

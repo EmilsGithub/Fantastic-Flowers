@@ -4,16 +4,17 @@ import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.custom.*;
 import net.emilsg.ffaf.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
@@ -23,6 +24,12 @@ public class ModBlocks {
 
     //Crop Blocks
 
+    public static final Block PINEAPPLE_CROP = registerBlockWithoutItem("pineapple_crop", new ModPineappleBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block SOY_BEAN_CROP = registerBlockWithoutItem("soy_bean_crop", new ModSoyBeanBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block SPRING_ONION_CROP = registerBlockWithoutItem("spring_onion_crop", new ModSpringOnionBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block PEANUT_CROP = registerBlockWithoutItem("peanut_crop", new ModPeanutBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block TRUFFLE_CROP = registerBlockWithoutItem("truffle_crop", new ModTruffleBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
+    public static final Block BROCCOLI_CROP = registerBlockWithoutItem("broccoli_crop", new ModBroccoliBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block SWEET_POTATO_CROP = registerBlockWithoutItem("sweet_potato_crop", new ModMustardBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block MUSTARD_CROP = registerBlockWithoutItem("mustard_crop", new ModMustardBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
     public static final Block CORN_CROP = registerBlockWithoutItem("corn_crop", new ModCornBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision()));
@@ -50,7 +57,7 @@ public class ModBlocks {
 
     //Plant Blocks
 
-    public static final Block CLOVERS = registerBlock("clovers", new CloversBlock(PlantBlock.Settings.of(Material.PLANT).breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().noCollision()), ModItemGroup.FFAF);
+    public static final Block CLOVERS = registerBlock("clovers", new ModCloversBlock(PlantBlock.Settings.of(Material.PLANT).breakInstantly().sounds(BlockSoundGroup.GRASS).nonOpaque().noCollision()), ModItemGroup.FFAF);
 
     //Tall Flower Blocks
 
@@ -63,23 +70,28 @@ public class ModBlocks {
     public static final Block PRICKLY_PEAR_BLOCK = registerBlockWithoutItem("prickly_pear_block", new ModPricklyPearBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()));
     public static final Block RASPBERRY_BUSH = registerBlockWithoutItem("raspberry_bush", new ModRaspberryBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()));
 
+    //Leaves
+
+    public static final Block APPLE_TREE_LEAVES = registerBlock("apple_tree_leaves", new ModLeafAppleBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
+
 
 
 
 private static Block registerBlockWithoutItem(String name, Block block) {
-    return Registry.register(Registry.BLOCK, new Identifier(FantasticFlowersAndFarming.MOD_ID, name), block);
+    return Registry.register(Registries.BLOCK, new Identifier(FantasticFlowersAndFarming.MOD_ID, name), block);
 }
 
 private static Block registerBlock(String name, Block block, ItemGroup tab) {
     registerBlockItem(name, block, tab);
-    return Registry.register(Registry.BLOCK, new Identifier(FantasticFlowersAndFarming.MOD_ID, name), block);
+    return Registry.register(Registries.BLOCK, new Identifier(FantasticFlowersAndFarming.MOD_ID, name), block);
 }
 
-private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
-    return Registry.register(Registry.ITEM, new Identifier(FantasticFlowersAndFarming.MOD_ID, name),
-            new BlockItem(block, new FabricItemSettings().group(tab)));
-}
-
+    private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(FantasticFlowersAndFarming.MOD_ID, name),
+            new BlockItem(block, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+        return item;
+    }
 
     public static void registerModBlocks(){
         FantasticFlowersAndFarming.LOGGER.debug("Registering ModBlocks for " + FantasticFlowersAndFarming.MOD_ID);
