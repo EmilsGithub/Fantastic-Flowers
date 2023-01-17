@@ -44,8 +44,8 @@ processResources {
 def dataOutput = 'src/main/generated'
 
 loom {
-	runs{
-		datagen{
+	runs {
+		datagen {
 			server()
 
 			name "Data Generation"
