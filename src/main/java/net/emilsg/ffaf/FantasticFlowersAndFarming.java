@@ -19,7 +19,7 @@ public class FantasticFlowersAndFarming implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroup.registerItemGroups();
+		ModItemGroup.registerItemGroup();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

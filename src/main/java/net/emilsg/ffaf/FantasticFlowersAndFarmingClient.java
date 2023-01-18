@@ -1,6 +1,7 @@
 package net.emilsg.ffaf;
 
 import net.emilsg.ffaf.block.ModBlocks;
+import net.emilsg.ffaf.util.ModRegistries;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -52,6 +53,8 @@ public class FantasticFlowersAndFarmingClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.PRICKLY_PEAR_BLOCK);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.RASPBERRY_BUSH);
+
+        ModRegistries.registerLeafColors();
 
     }
 

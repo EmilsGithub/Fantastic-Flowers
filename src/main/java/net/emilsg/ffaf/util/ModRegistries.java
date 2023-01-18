@@ -1,7 +1,9 @@
 package net.emilsg.ffaf.util;
 
+import net.emilsg.ffaf.block.ModBlocks;
 import net.emilsg.ffaf.item.ModItems;
 import net.emilsg.ffaf.mixin.ItemAccessor;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -32,5 +34,9 @@ public class ModRegistries {
                     new ItemStack(ModItems.SEED_BAG, 1),
                     6, 5, 0.1f));
                 });
+    }
+
+    public static void registerLeafColors() {
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x3495eb, ModBlocks.APPLE_TREE_LEAVES);
     }
 }

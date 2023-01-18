@@ -110,55 +110,55 @@ public class ModItems {
 
     public static void addItemsToItemGroups() {
 
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PINEAPPLE);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, SOY_BEAN);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, SPRING_ONION);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, BROCCOLI);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CORN);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, MINT);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, GRAPES);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, RICE);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CABBAGE);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PEAS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, GARLIC);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, RASPBERRY);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PRICKLY_PEAR);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, STRAWBERRY);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, ONION);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, TOMATO);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, LETTUCE);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, BLUEBERRIES);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, EGGPLANT);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CHILI);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, RED_BELL_PEPPER);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, YELLOW_BELL_PEPPER);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, GREEN_BELL_PEPPER);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, SWEET_POTATO);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PEANUT);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, TRUFFLES);
+        addToItemGroup(ModItemGroup.FFAF, PINEAPPLE);
+        addToItemGroup(ModItemGroup.FFAF, SOY_BEAN);
+        addToItemGroup(ModItemGroup.FFAF, SPRING_ONION);
+        addToItemGroup(ModItemGroup.FFAF, BROCCOLI);
+        addToItemGroup(ModItemGroup.FFAF, CORN);
+        addToItemGroup(ModItemGroup.FFAF, MINT);
+        addToItemGroup(ModItemGroup.FFAF, GRAPES);
+        addToItemGroup(ModItemGroup.FFAF, RICE);
+        addToItemGroup(ModItemGroup.FFAF, CABBAGE);
+        addToItemGroup(ModItemGroup.FFAF, PEAS);
+        addToItemGroup(ModItemGroup.FFAF, GARLIC);
+        addToItemGroup(ModItemGroup.FFAF, RASPBERRY);
+        addToItemGroup(ModItemGroup.FFAF, PRICKLY_PEAR);
+        addToItemGroup(ModItemGroup.FFAF, STRAWBERRY);
+        addToItemGroup(ModItemGroup.FFAF, ONION);
+        addToItemGroup(ModItemGroup.FFAF, TOMATO);
+        addToItemGroup(ModItemGroup.FFAF, LETTUCE);
+        addToItemGroup(ModItemGroup.FFAF, BLUEBERRIES);
+        addToItemGroup(ModItemGroup.FFAF, EGGPLANT);
+        addToItemGroup(ModItemGroup.FFAF, CHILI);
+        addToItemGroup(ModItemGroup.FFAF, RED_BELL_PEPPER);
+        addToItemGroup(ModItemGroup.FFAF, YELLOW_BELL_PEPPER);
+        addToItemGroup(ModItemGroup.FFAF, GREEN_BELL_PEPPER);
+        addToItemGroup(ModItemGroup.FFAF, SWEET_POTATO);
+        addToItemGroup(ModItemGroup.FFAF, PEANUT);
+        addToItemGroup(ModItemGroup.FFAF, TRUFFLES);
 
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PINEAPPLE_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, SOY_BEAN_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, SPRING_ONION_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, BROCCOLI_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CORN_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, MINT_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, GRAPE_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, RICE_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CABBAGE_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PEA_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, GARLIC_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, RASPBERRY_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, PRICKLY_PEAR_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, STRAWBERRY_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, ONION_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, TOMATO_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, LETTUCE_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, BLUEBERRY_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, EGGPLANT_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, CHILI_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, BELL_PEPPER_SEEDS);
-        addToItemGroup(ModItemGroup.FFAF_CROPS_AND_TREES, MUSTARD_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, PINEAPPLE_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, SOY_BEAN_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, SPRING_ONION_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, BROCCOLI_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, CORN_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, MINT_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, GRAPE_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, RICE_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, CABBAGE_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, PEA_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, GARLIC_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, RASPBERRY_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, PRICKLY_PEAR_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, STRAWBERRY_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, ONION_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, TOMATO_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, LETTUCE_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, BLUEBERRY_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, EGGPLANT_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, CHILI_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, BELL_PEPPER_SEEDS);
+        addToItemGroup(ModItemGroup.FFAF, MUSTARD_SEEDS);
 
         addToItemGroup(ModItemGroup.FFAF, FLOUR);
         addToItemGroup(ModItemGroup.FFAF, SALT);
@@ -166,14 +166,14 @@ public class ModItems {
         addToItemGroup(ModItemGroup.FFAF, WATER);
         addToItemGroup(ModItemGroup.FFAF, MILK);
 
-        addToItemGroup(ModItemGroup.FFAF_FOOD, SQUID);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, BLUEBERRY_JAM);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, SUSHI);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, RICE_BOWL);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, RAMEN);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, ONIGIRI);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, BLUEBERRY_PIE);
-        addToItemGroup(ModItemGroup.FFAF_FOOD, MINCED_BEEF);
+        addToItemGroup(ModItemGroup.FFAF, SQUID);
+        addToItemGroup(ModItemGroup.FFAF, BLUEBERRY_JAM);
+        addToItemGroup(ModItemGroup.FFAF, SUSHI);
+        addToItemGroup(ModItemGroup.FFAF, RICE_BOWL);
+        addToItemGroup(ModItemGroup.FFAF, RAMEN);
+        addToItemGroup(ModItemGroup.FFAF, ONIGIRI);
+        addToItemGroup(ModItemGroup.FFAF, BLUEBERRY_PIE);
+        addToItemGroup(ModItemGroup.FFAF, MINCED_BEEF);
 
         addToItemGroup(ModItemGroup.FFAF, KNIFE);
         addToItemGroup(ModItemGroup.FFAF, MORTAR_AND_PESTLE);
@@ -196,5 +196,7 @@ public class ModItems {
 
     public static void registerModItems() {
         FantasticFlowersAndFarming.LOGGER.info("Registering Mod Items For " + FantasticFlowersAndFarming.MOD_ID);
+
+        addItemsToItemGroups();
     }
 }

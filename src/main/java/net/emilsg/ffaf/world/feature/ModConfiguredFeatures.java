@@ -21,8 +21,8 @@ public class ModConfiguredFeatures {
     //Flowers and Plants
 
     public static final RegistryKey<ConfiguredFeature<?,?>> LIGHT_BLUE_FORGET_ME_NOT_KEY = registerKey("light_blue_forget_me_not");
-    public static final RegistryKey<ConfiguredFeature<?,?>> PINK_FORGET_ME_NOT_KEY = registerKey("pink_blue_forget_me_not");
-    public static final RegistryKey<ConfiguredFeature<?,?>> WHITE_FORGET_ME_NOT_KEY = registerKey("white_blue_forget_me_not");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PINK_FORGET_ME_NOT_KEY = registerKey("pink_forget_me_not");
+    public static final RegistryKey<ConfiguredFeature<?,?>> WHITE_FORGET_ME_NOT_KEY = registerKey("white_forget_me_not");
     public static final RegistryKey<ConfiguredFeature<?,?>> MAGENTA_LUPINE_KEY = registerKey("magenta_lupine");
     public static final RegistryKey<ConfiguredFeature<?,?>> BLUE_LUPINE_KEY = registerKey("blue_lupine");
     public static final RegistryKey<ConfiguredFeature<?,?>> WHITE_ROSE_BUSH_KEY = registerKey("white_rose_bush");
@@ -35,10 +35,10 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         var placedFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
 
-        RuleTest sandReplaceables = new BlockMatchRuleTest(Blocks.SAND);
+        RuleTest sandReplaceable = new BlockMatchRuleTest(Blocks.SAND);
 
-        List<OreFeatureConfig.Target> overworldSandSaltOres =
-                List.of(OreFeatureConfig.createTarget(sandReplaceables, ModBlocks.SAND_SALT_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> sandSaltOres =
+                List.of(OreFeatureConfig.createTarget(sandReplaceable, ModBlocks.SAND_SALT_ORE.getDefaultState()));
 
         register(context, LIGHT_BLUE_FORGET_ME_NOT_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                 64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
@@ -76,7 +76,7 @@ public class ModConfiguredFeatures {
                 32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PRICKLY_PEAR_BLOCK)))));
 
-        register(context, SAND_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldSandSaltOres, 12));
+        register(context, SAND_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(sandSaltOres, 12));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

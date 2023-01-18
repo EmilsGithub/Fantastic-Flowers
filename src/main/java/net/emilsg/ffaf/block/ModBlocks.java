@@ -3,6 +3,7 @@ package net.emilsg.ffaf.block;
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.custom.*;
 import net.emilsg.ffaf.item.ModItemGroup;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -72,7 +73,7 @@ public class ModBlocks {
 
     //Leaves
 
-    public static final Block APPLE_TREE_LEAVES = registerBlock("apple_tree_leaves", new ModLeafAppleBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
+    public static final Block APPLE_TREE_LEAVES = registerBlockWithoutItem("apple_tree_leaves", new ModLeafAppleBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
 
 
 
