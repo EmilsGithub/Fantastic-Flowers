@@ -3,11 +3,9 @@ package net.emilsg.ffaf;
 import net.emilsg.ffaf.block.ModBlocks;
 import net.emilsg.ffaf.item.ModItemGroup;
 import net.emilsg.ffaf.item.ModItems;
-import net.emilsg.ffaf.mixin.ItemAccessor;
+import net.emilsg.ffaf.util.ModFlammableAndOrStrippableBlocks;
 import net.emilsg.ffaf.util.ModLootTableModifiers;
 import net.emilsg.ffaf.util.ModRegistries;
-import net.emilsg.ffaf.world.feature.ModConfiguredFeatures;
-import net.emilsg.ffaf.world.gen.ModOreGeneration;
 import net.emilsg.ffaf.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -24,11 +22,13 @@ public class FantasticFlowersAndFarming implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModWorldGen.generateModWorldGen();
+
 		ModLootTableModifiers.modifyLootTables();
 
 		ModRegistries.registerModstuffs();
 
-		ModWorldGen.generateModWorldGen();
+		ModFlammableAndOrStrippableBlocks.registerFlammableAndStrippableBlocks();
 
 
 	}

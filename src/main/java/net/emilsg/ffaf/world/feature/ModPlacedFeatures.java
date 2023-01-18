@@ -1,6 +1,7 @@
 package net.emilsg.ffaf.world.feature;
 
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
+import net.emilsg.ffaf.block.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -15,6 +16,8 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
+    public static final RegistryKey<PlacedFeature> APPLE_TREE_CHECKED_KEY = registerKey("apple_tree_checked");
+    public static final RegistryKey<PlacedFeature> APPLE_TREE_PLACED_KEY = registerKey("apple_tree_placed");
 
     public static final RegistryKey<PlacedFeature> CLOVERS_PLACED_KEY = registerKey("clovers_placed");
     public static final RegistryKey<PlacedFeature> LIGHT_BLUE_FORGET_ME_NOT_PLACED_KEY = registerKey("light_blue_forget_me_not_placed");
@@ -30,6 +33,11 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(context, APPLE_TREE_CHECKED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_TREE_KEY),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.APPLE_TREE_SAPLING)));
+        register(context, APPLE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_TREE_KEY),
+                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
 
         register(context, CLOVERS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CLOVERS_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());

@@ -23,7 +23,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
-public class ModLeafFruitBlock extends ModCropBlock implements Fertilizable {
+public class ModLeafFruitBlock extends ModCropBlock implements Fertilizable{
     public static final IntProperty DISTANCE = IntProperty.of("distance", 1, 7);
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 

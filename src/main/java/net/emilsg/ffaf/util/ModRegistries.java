@@ -37,6 +37,8 @@ public class ModRegistries {
     }
 
     public static void registerLeafColors() {
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x54a614, ModBlocks.APPLE_TREE_LEAVES);
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x54a614, ModBlocks.APPLE_TREE_LEAVES);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x54a614, ModBlocks.APPLE_TREE_FRUIT_LEAVES);
     }
 }

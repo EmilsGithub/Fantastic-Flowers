@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ffaf:apple_tree_log",
+    "ffaf:apple_tree_wood",
+    "ffaf:stripped_apple_tree_log",
+    "ffaf:stripped_apple_tree_wood"
+  ]
+}

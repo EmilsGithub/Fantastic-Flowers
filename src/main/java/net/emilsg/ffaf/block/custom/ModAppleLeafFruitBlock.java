@@ -14,9 +14,9 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class ModLeafAppleBlock extends ModLeafFruitBlock {
+public class ModAppleLeafFruitBlock extends ModLeafFruitBlock{
 
-    public ModLeafAppleBlock(Settings settings) {
+    public ModAppleLeafFruitBlock(Settings settings) {
         super(settings);
     }
 

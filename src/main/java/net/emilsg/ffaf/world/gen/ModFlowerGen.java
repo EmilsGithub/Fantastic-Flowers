@@ -8,7 +8,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 import static net.minecraft.world.biome.BiomeKeys.*;
 
-public class ModFlowerGeneration {
+public class ModFlowerGen {
     public static void generateFlowers(){
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS,FOREST,JUNGLE,FLOWER_FOREST,BIRCH_FOREST,MEADOW),

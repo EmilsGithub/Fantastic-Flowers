@@ -10,8 +10,12 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
@@ -29,6 +33,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> CLOVERS_KEY = registerKey("clovers");
     public static final RegistryKey<ConfiguredFeature<?,?>> TRUFFLE_CROP_KEY = registerKey("truffle_crop");
     public static final RegistryKey<ConfiguredFeature<?,?>> PRICKLY_PEAR_BLOCK_KEY = registerKey("prickly_pear_block");
+
+    public static final RegistryKey<ConfiguredFeature<?,?>> APPLE_TREE_KEY = registerKey("apple_tree");
+    public static final RegistryKey<ConfiguredFeature<?,?>> APPLE_TREE_SPAWN_KEY = registerKey("apple_tree_spawn");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> SAND_SALT_ORE_KEY = registerKey("sand_salt_ore");
 
@@ -77,6 +84,22 @@ public class ModConfiguredFeatures {
                         new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PRICKLY_PEAR_BLOCK)))));
 
         register(context, SAND_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(sandSaltOres, 12));
+
+        register(context, APPLE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.APPLE_TREE_LOG),
+                new StraightTrunkPlacer(5, 1, 0),
+                BlockStateProvider.of(ModBlocks.APPLE_TREE_FRUIT_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+
+        register(context, APPLE_TREE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_PLACED_KEY),
+                        0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_PLACED_KEY)));
+
+
+
+
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

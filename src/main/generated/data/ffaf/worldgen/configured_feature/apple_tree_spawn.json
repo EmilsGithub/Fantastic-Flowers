@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "ffaf:apple_tree_placed",
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": "ffaf:apple_tree_placed"
+      }
+    ]
+  }
+}

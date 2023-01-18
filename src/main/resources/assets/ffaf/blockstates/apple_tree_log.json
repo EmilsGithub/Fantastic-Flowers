@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ffaf:block/apple_tree_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ffaf:block/apple_tree_log"
+    },
+    "axis=z": {
+      "model": "ffaf:block/apple_tree_log_horizontal",
+      "x": 90
+    }
+  }
+}

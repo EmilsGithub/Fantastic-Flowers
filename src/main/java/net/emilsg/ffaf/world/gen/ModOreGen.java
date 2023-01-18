@@ -7,7 +7,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 import static net.minecraft.world.biome.BiomeKeys.*;
 
-public class ModOreGeneration {
+public class ModOreGen {
     public static void generateOres()   {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(OCEAN,COLD_OCEAN,DEEP_COLD_OCEAN,DEEP_OCEAN,
         DEEP_FROZEN_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,FROZEN_OCEAN,LUKEWARM_OCEAN,WARM_OCEAN,RIVER,FROZEN_RIVER),

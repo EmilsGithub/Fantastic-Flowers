@@ -3,7 +3,7 @@ package net.emilsg.ffaf.block;
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.custom.*;
 import net.emilsg.ffaf.item.ModItemGroup;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.emilsg.ffaf.world.feature.tree.AppleTreeSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -71,10 +71,16 @@ public class ModBlocks {
     public static final Block PRICKLY_PEAR_BLOCK = registerBlockWithoutItem("prickly_pear_block", new ModPricklyPearBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()));
     public static final Block RASPBERRY_BUSH = registerBlockWithoutItem("raspberry_bush", new ModRaspberryBlock(FabricBlockSettings.copy(Blocks.SWEET_BERRY_BUSH).nonOpaque()));
 
-    //Leaves
+    //Trees
 
-    public static final Block APPLE_TREE_LEAVES = registerBlockWithoutItem("apple_tree_leaves", new ModLeafAppleBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
-
+    //Apple Tree
+    public static final Block APPLE_TREE_FRUIT_LEAVES = registerBlockWithoutItem("apple_tree_fruit_leaves", new ModAppleLeafFruitBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
+    public static final Block APPLE_TREE_LEAVES = registerBlock("apple_tree_leaves", new ModLeafBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
+    public static final Block APPLE_TREE_LOG = registerBlock("apple_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block APPLE_TREE_WOOD = registerBlock("apple_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_APPLE_TREE_LOG = registerBlock("stripped_apple_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_APPLE_TREE_WOOD = registerBlock("stripped_apple_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block APPLE_TREE_SAPLING = registerBlock("apple_tree_sapling", new SaplingBlock(new AppleTreeSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.FFAF);
 
 
 
