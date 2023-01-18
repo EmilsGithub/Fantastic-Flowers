@@ -67,7 +67,7 @@ public class ModPlacedFeatures {
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
         register(context, SAND_SALT_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.SAND_SALT_ORE_KEY),
-                modifiersWithCount(16,
+                modifiersWithCount(32,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-40), YOffset.fixed(80))));
     }
 

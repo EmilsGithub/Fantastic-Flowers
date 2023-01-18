@@ -92,14 +92,9 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
-
         register(context, APPLE_TREE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
-                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_PLACED_KEY),
-                        0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_PLACED_KEY)));
-
-
-
-
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_CHECKED_KEY),
+                        0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_CHECKED_KEY)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
