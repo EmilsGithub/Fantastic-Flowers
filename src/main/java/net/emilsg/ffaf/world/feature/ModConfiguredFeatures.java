@@ -3,19 +3,30 @@ package net.emilsg.ffaf.world.feature;
 
 import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.ModBlocks;
+import net.emilsg.ffaf.block.custom.ModLeafFruitBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
+import org.apache.commons.lang3.builder.Builder;
 
 import java.util.List;
 
@@ -34,8 +45,14 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?,?>> TRUFFLE_CROP_KEY = registerKey("truffle_crop");
     public static final RegistryKey<ConfiguredFeature<?,?>> PRICKLY_PEAR_BLOCK_KEY = registerKey("prickly_pear_block");
 
+    public static final RegistryKey<ConfiguredFeature<?,?>> LADDER_KEY = registerKey("ladder");
+
     public static final RegistryKey<ConfiguredFeature<?,?>> APPLE_TREE_KEY = registerKey("apple_tree");
     public static final RegistryKey<ConfiguredFeature<?,?>> APPLE_TREE_SPAWN_KEY = registerKey("apple_tree_spawn");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PEAR_TREE_KEY = registerKey("pear_tree");
+    public static final RegistryKey<ConfiguredFeature<?,?>> PEAR_TREE_SPAWN_KEY = registerKey("pear_tree_spawn");
+    public static final RegistryKey<ConfiguredFeature<?,?>> COCONUT_PALM_TREE_KEY = registerKey("coconut_palm_tree");
+    public static final RegistryKey<ConfiguredFeature<?,?>> COCONUT_PALM_TREE_SPAWN_KEY = registerKey("coconut_palm_tree_spawn");
 
     public static final RegistryKey<ConfiguredFeature<?,?>> SAND_SALT_ORE_KEY = registerKey("sand_salt_ore");
 
@@ -46,6 +63,7 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> sandSaltOres =
                 List.of(OreFeatureConfig.createTarget(sandReplaceable, ModBlocks.SAND_SALT_ORE.getDefaultState()));
+
 
         register(context, LIGHT_BLUE_FORGET_ME_NOT_KEY, Feature.FLOWER, ConfiguredFeatures.createRandomPatchFeatureConfig(
                 64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
@@ -87,14 +105,36 @@ public class ModConfiguredFeatures {
 
         register(context, APPLE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.APPLE_TREE_LOG),
-                new StraightTrunkPlacer(5, 1, 0),
+                new StraightTrunkPlacer(5, 2, 0),
                 BlockStateProvider.of(ModBlocks.APPLE_TREE_FRUIT_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build());
 
         register(context, APPLE_TREE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_CHECKED_KEY),
                         0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.APPLE_TREE_CHECKED_KEY)));
+
+        register(context, PEAR_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.PEAR_TREE_LOG),
+                new StraightTrunkPlacer(5, 2, 0),
+                BlockStateProvider.of(ModBlocks.PEAR_TREE_FRUIT_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build());
+
+        register(context, PEAR_TREE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.PEAR_TREE_CHECKED_KEY),
+                        0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.PEAR_TREE_CHECKED_KEY)));
+
+        register(context, COCONUT_PALM_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.COCONUT_PALM_TREE_LOG),
+                new StraightTrunkPlacer(5, 2, 0),
+                BlockStateProvider.of(ModBlocks.COCONUT_PALM_TREE_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.SAND)).ignoreVines().build());
+
+        register(context, COCONUT_PALM_TREE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
+                new RandomFeatureConfig(List.of(new RandomFeatureEntry(placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.COCONUT_PALM_TREE_CHECKED_KEY),
+                        0.5f)), placedFeatureRegistryEntryLookup.getOrThrow(ModPlacedFeatures.COCONUT_PALM_TREE_CHECKED_KEY)));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

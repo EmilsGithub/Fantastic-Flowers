@@ -23,10 +23,35 @@ public class ModFlammableAndOrStrippableBlocks {
 
         registry.add(ModBlocks.APPLE_TREE_FRUIT_LEAVES, 30, 60);
         registry.add(ModBlocks.APPLE_TREE_LEAVES, 30, 60);
+
+        registry.add(ModBlocks.PEAR_TREE_LOG, 5, 5);
+        registry.add(ModBlocks.PEAR_TREE_WOOD, 5, 5);
+        registry.add(ModBlocks.STRIPPED_PEAR_TREE_LOG, 5, 5);
+        registry.add(ModBlocks.STRIPPED_PEAR_TREE_WOOD, 5, 5);
+
+        //registry.add(ModBlocks.APPLE_TREE_PLANKS, 5, 20);
+
+        registry.add(ModBlocks.PEAR_TREE_FRUIT_LEAVES, 30, 60);
+        registry.add(ModBlocks.PEAR_TREE_LEAVES, 30, 60);
+
+        registry.add(ModBlocks.COCONUT_PALM_TREE_LOG, 5, 5);
+        registry.add(ModBlocks.COCONUT_PALM_TREE_WOOD, 5, 5);
+        registry.add(ModBlocks.STRIPPED_COCONUT_PALM_TREE_LOG, 5, 5);
+        registry.add(ModBlocks.STRIPPED_COCONUT_PALM_TREE_WOOD, 5, 5);
+
+        //registry.add(ModBlocks.APPLE_TREE_PLANKS, 5, 20);
+
+        registry.add(ModBlocks.COCONUT_PALM_TREE_LEAVES, 30, 60);
     }
 
     public static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.APPLE_TREE_LOG, ModBlocks.STRIPPED_APPLE_TREE_LOG);
         StrippableBlockRegistry.register(ModBlocks.APPLE_TREE_WOOD, ModBlocks.STRIPPED_APPLE_TREE_WOOD);
+
+        StrippableBlockRegistry.register(ModBlocks.PEAR_TREE_LOG, ModBlocks.STRIPPED_PEAR_TREE_LOG);
+        StrippableBlockRegistry.register(ModBlocks.PEAR_TREE_WOOD, ModBlocks.STRIPPED_PEAR_TREE_WOOD);
+
+        StrippableBlockRegistry.register(ModBlocks.COCONUT_PALM_TREE_LOG, ModBlocks.STRIPPED_COCONUT_PALM_TREE_LOG);
+        StrippableBlockRegistry.register(ModBlocks.COCONUT_PALM_TREE_WOOD, ModBlocks.STRIPPED_COCONUT_PALM_TREE_WOOD);
     }
 }

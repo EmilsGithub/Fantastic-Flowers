@@ -4,6 +4,8 @@ import net.emilsg.ffaf.FantasticFlowersAndFarming;
 import net.emilsg.ffaf.block.custom.*;
 import net.emilsg.ffaf.item.ModItemGroup;
 import net.emilsg.ffaf.world.feature.tree.AppleTreeSaplingGenerator;
+import net.emilsg.ffaf.world.feature.tree.CoconutPalmTreeSaplingGenerator;
+import net.emilsg.ffaf.world.feature.tree.PearTreeSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -74,13 +76,29 @@ public class ModBlocks {
     //Trees
 
     //Apple Tree
-    public static final Block APPLE_TREE_FRUIT_LEAVES = registerBlockWithoutItem("apple_tree_fruit_leaves", new ModAppleLeafFruitBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
+    public static final Block APPLE_TREE_FRUIT_LEAVES = registerBlockWithoutItem("apple_tree_fruit_leaves", new ModAppleTreeLeafFruitBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
     public static final Block APPLE_TREE_LEAVES = registerBlock("apple_tree_leaves", new ModLeafBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
     public static final Block APPLE_TREE_LOG = registerBlock("apple_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroup.FFAF);
     public static final Block APPLE_TREE_WOOD = registerBlock("apple_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroup.FFAF);
     public static final Block STRIPPED_APPLE_TREE_LOG = registerBlock("stripped_apple_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.FFAF);
     public static final Block STRIPPED_APPLE_TREE_WOOD = registerBlock("stripped_apple_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.FFAF);
     public static final Block APPLE_TREE_SAPLING = registerBlock("apple_tree_sapling", new SaplingBlock(new AppleTreeSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.FFAF);
+
+    public static final Block COCONUT_PALM_TREE_FRUIT = registerBlockWithoutItem("coconut_palm_tree_fruit", new ModCoconutPalmFruitBlock(FabricBlockSettings.copy(Blocks.COCOA).nonOpaque()));
+    public static final Block COCONUT_PALM_TREE_LEAVES = registerBlock("coconut_palm_tree_leaves", new ModLeafBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
+    public static final Block COCONUT_PALM_TREE_LOG = registerBlock("coconut_palm_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block COCONUT_PALM_TREE_WOOD = registerBlock("coconut_palm_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_COCONUT_PALM_TREE_LOG = registerBlock("stripped_coconut_palm_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_COCONUT_PALM_TREE_WOOD = registerBlock("stripped_coconut_palm_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block COCONUT_PALM_TREE_SAPLING = registerBlock("coconut_palm_tree_sapling", new ModCoconutPalmTreeSapling(new CoconutPalmTreeSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.FFAF);
+
+    public static final Block PEAR_TREE_FRUIT_LEAVES = registerBlockWithoutItem("pear_tree_fruit_leaves", new ModPearTreeLeafFruitBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
+    public static final Block PEAR_TREE_LEAVES = registerBlock("pear_tree_leaves", new ModLeafBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.FFAF);
+    public static final Block PEAR_TREE_LOG = registerBlock("pear_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block PEAR_TREE_WOOD = registerBlock("pear_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_PEAR_TREE_LOG = registerBlock("stripped_pear_tree_log", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.FFAF);
+    public static final Block STRIPPED_PEAR_TREE_WOOD = registerBlock("stripped_pear_tree_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.FFAF);
+    public static final Block PEAR_TREE_SAPLING = registerBlock("pear_tree_sapling", new SaplingBlock(new PearTreeSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.FFAF);
 
 
 
@@ -104,3 +122,5 @@ private static Block registerBlock(String name, Block block, ItemGroup tab) {
         FantasticFlowersAndFarming.LOGGER.debug("Registering ModBlocks for " + FantasticFlowersAndFarming.MOD_ID);
     }
 }
+
+

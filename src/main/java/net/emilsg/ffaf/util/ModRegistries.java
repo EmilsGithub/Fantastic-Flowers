@@ -15,6 +15,7 @@ public class ModRegistries {
     public static void registerModstuffs() {
         registerCustomTrades();
         registerUtensils();
+
     }
 
     private static void registerUtensils() {

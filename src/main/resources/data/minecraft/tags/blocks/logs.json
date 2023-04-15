@@ -4,6 +4,15 @@
     "ffaf:apple_tree_log",
     "ffaf:apple_tree_wood",
     "ffaf:stripped_apple_tree_log",
-    "ffaf:stripped_apple_tree_wood"
+    "ffaf:stripped_apple_tree_wood",
+    "ffaf:pear_tree_log",
+    "ffaf:pear_tree_wood",
+    "ffaf:stripped_pear_tree_log",
+    "ffaf:stripped_pear_tree_wood",
+
+    "ffaf:coconut_palm_tree_log",
+    "ffaf:coconut_palm_tree_wood",
+    "ffaf:stripped_coconut_palm_tree_log",
+    "ffaf:stripped_coconut_palm_tree_wood"
   ]
 }

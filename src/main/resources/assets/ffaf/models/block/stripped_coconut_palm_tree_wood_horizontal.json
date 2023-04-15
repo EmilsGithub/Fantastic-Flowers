@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "ffaf:block/stripped_coconut_palm_tree_log",
+    "side": "ffaf:block/stripped_coconut_palm_tree_log"
+  }
+}

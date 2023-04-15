@@ -1,6 +1,7 @@
 package net.emilsg.ffaf.block.custom;
 
-import net.minecraft.block.*;
+import net.emilsg.ffaf.item.ModItems;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -14,16 +15,16 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class ModAppleLeafFruitBlock extends ModLeafFruitBlock{
+public class ModPearTreeLeafFruitBlock extends ModLeafFruitBlock{
 
-    public ModAppleLeafFruitBlock(Settings settings) {
+    public ModPearTreeLeafFruitBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     @Deprecated
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(Items.APPLE);
+        return new ItemStack(ModItems.PEAR);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class ModAppleLeafFruitBlock extends ModLeafFruitBlock{
             return ActionResult.PASS;
         } else if (i > 1) {
             int j = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(Items.APPLE, j + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(ModItems.PEAR, j + (bl ? 1 : 0)));
             world.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             BlockState blockState = (BlockState)state.with(AGE, 0);
             world.setBlockState(pos, blockState, 2);

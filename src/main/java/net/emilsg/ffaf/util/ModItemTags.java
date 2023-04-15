@@ -7,5 +7,6 @@ import net.minecraft.util.Identifier;
 
 public class ModItemTags {
     public static final TagKey<Item> FFAF_SEEDS = TagKey.of(Registries.ITEM.getKey(), new Identifier("ffaf", "ffaf_seeds"));
+    public static final TagKey<Item> FFAF_COCONUT_LOGS = TagKey.of(Registries.ITEM.getKey(), new Identifier("ffaf", "ffaf_coconut_logs"));
 }
 

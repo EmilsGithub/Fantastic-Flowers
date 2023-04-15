@@ -45,7 +45,10 @@ public class ModItems {
     public static final Item PEANUT = registerItem("peanut", new AliasedBlockItem(ModBlocks.PEANUT_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item TRUFFLES = registerItem("truffles", new AliasedBlockItem(ModBlocks.TRUFFLE_CROP, new FabricItemSettings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
 
-    //Crop Seeds - FFAF_CROPS_AND_TREES
+    public static final Item COCONUT = registerItem("coconut", new Item (new FabricItemSettings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item PEAR = registerItem("pear", new Item (new FabricItemSettings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+
+    //Crop Seeds
     public static final Item PINEAPPLE_SEEDS = registerItem("pineapple_seeds", new AliasedBlockItem(ModBlocks.PINEAPPLE_CROP, new FabricItemSettings()));
     public static final Item SOY_BEAN_SEEDS = registerItem("soy_bean_seeds", new AliasedBlockItem(ModBlocks.SOY_BEAN_CROP, new FabricItemSettings()));
     public static final Item SPRING_ONION_SEEDS = registerItem("spring_onion_seeds", new AliasedBlockItem(ModBlocks.SPRING_ONION_CROP, new FabricItemSettings()));
@@ -136,6 +139,9 @@ public class ModItems {
         addToItemGroup(ModItemGroup.FFAF, SWEET_POTATO);
         addToItemGroup(ModItemGroup.FFAF, PEANUT);
         addToItemGroup(ModItemGroup.FFAF, TRUFFLES);
+
+        addToItemGroup(ModItemGroup.FFAF, COCONUT);
+        addToItemGroup(ModItemGroup.FFAF, PEAR);
 
         addToItemGroup(ModItemGroup.FFAF, PINEAPPLE_SEEDS);
         addToItemGroup(ModItemGroup.FFAF, SOY_BEAN_SEEDS);

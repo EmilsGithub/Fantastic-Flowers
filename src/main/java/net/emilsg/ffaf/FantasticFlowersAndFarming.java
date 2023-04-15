@@ -4,6 +4,7 @@ import net.emilsg.ffaf.block.ModBlocks;
 import net.emilsg.ffaf.item.ModItemGroup;
 import net.emilsg.ffaf.item.ModItems;
 import net.emilsg.ffaf.util.ModFlammableAndOrStrippableBlocks;
+import net.emilsg.ffaf.util.ModItemTags;
 import net.emilsg.ffaf.util.ModLootTableModifiers;
 import net.emilsg.ffaf.util.ModRegistries;
 import net.emilsg.ffaf.world.gen.ModWorldGen;

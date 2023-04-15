@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
@@ -18,6 +19,12 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> APPLE_TREE_CHECKED_KEY = registerKey("apple_tree_checked");
     public static final RegistryKey<PlacedFeature> APPLE_TREE_PLACED_KEY = registerKey("apple_tree_placed");
+
+    public static final RegistryKey<PlacedFeature> PEAR_TREE_CHECKED_KEY = registerKey("pear_tree_checked");
+    public static final RegistryKey<PlacedFeature> PEAR_TREE_PLACED_KEY = registerKey("pear_tree_placed");
+
+    public static final RegistryKey<PlacedFeature> COCONUT_PALM_TREE_CHECKED_KEY = registerKey("coconut_palm_tree_checked");
+    public static final RegistryKey<PlacedFeature> COCONUT_PALM_TREE_PLACED_KEY = registerKey("coconut_palm_tree_placed");
 
     public static final RegistryKey<PlacedFeature> CLOVERS_PLACED_KEY = registerKey("clovers_placed");
     public static final RegistryKey<PlacedFeature> LIGHT_BLUE_FORGET_ME_NOT_PLACED_KEY = registerKey("light_blue_forget_me_not_placed");
@@ -31,13 +38,24 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> SAND_SALT_ORE_PLACED_KEY = registerKey("sand_salt_ore_placed");
 
+    static int treeRarity = 10;
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, APPLE_TREE_CHECKED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_TREE_KEY),
                 List.of(PlacedFeatures.wouldSurvive(ModBlocks.APPLE_TREE_SAPLING)));
-        register(context, APPLE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_TREE_KEY),
-                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
+        register(context, APPLE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_TREE_SPAWN_KEY),
+                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1/10, 0.01f, 1)));
+
+        register(context, PEAR_TREE_CHECKED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PEAR_TREE_KEY),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.PEAR_TREE_SAPLING)));
+        register(context, PEAR_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PEAR_TREE_SPAWN_KEY),
+                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1/10, 0.01f, 1)));
+
+        register(context, COCONUT_PALM_TREE_CHECKED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COCONUT_PALM_TREE_KEY),
+                List.of(PlacedFeatures.wouldSurvive(ModBlocks.COCONUT_PALM_TREE_SAPLING)));
+        register(context, COCONUT_PALM_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.COCONUT_PALM_TREE_SPAWN_KEY),
+                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1/10, 0.01f, 1)));
 
         register(context, CLOVERS_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CLOVERS_KEY),
                 RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
